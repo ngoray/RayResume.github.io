@@ -3,7 +3,7 @@ function move() {
     var x = document.getElementById("Loading");
     var y = document.getElementById("Home");
     var z = document.getElementById("Start");
-    document.body.style.backgroundImage = "url('./../images/matrixtunnel.gif')";   
+    document.body.style.backgroundImage = "url('./images/matrixtunnel.gif')";   
     if (i == 0) {
       z.style.display = "none";
       x.style.display = "block";
@@ -17,7 +17,7 @@ function move() {
           i = 0;
           x.style.display = "none";
           y.style.display = "block";
-          document.body.style.backgroundImage = "url('./../images/matrix.gif')";
+          document.body.style.backgroundImage = "url('./images/matrix.gif')";
         } else {
           width++;
           elem.style.width = width + "%";
