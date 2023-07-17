@@ -3,7 +3,7 @@ function move() {
     var x = document.getElementById("Loading");
     var y = document.getElementById("Home");
     var z = document.getElementById("Start");
-    document.body.style.backgroundImage = "url('./images/matrixtunnel.gif')";   
+    // document.body.style.backgroundImage = "url('./images/matrixtunnel1.gif')";   
     if (i == 0) {
       z.style.display = "none";
       x.style.display = "block";

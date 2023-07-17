@@ -19,7 +19,6 @@
 </style>
 </head>
 <body class="w3-black">
-
   <div style="max-width: 100%; max-height: 100%; position: relative; top: 300px;" id="Start">
     <center>
         <button class="button button3" onclick="move()">
@@ -28,19 +27,22 @@
     </center>
 </div>
 <div style="max-width: 100%; max-height: 100%; position: relative; top: 250px;display: none;" id="Loading">
-
+  <div style="background-image: url(./images/matrixtunnel.gif); height: 100%; width: 100%; background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
     <CENTER><h1 style="font-size: 4.5vw;">RAY</h1></CENTER>
         <div id="myProgress">
             <div id="myBar">10%</div>
                 <br>
         </div>
+  </div>
 </div>
 
-<div style="display: none;" id="Home">
+<div style="display: none; background-color: rgba(0, 0, 0, 0.508);" id="Home">
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <h1>R</h1>
+  <a href="index.html" style="text-decoration: none;"><h1>R</h1></a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
@@ -56,11 +58,11 @@
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
-  </a>
+  <!-- </a>
     <a onclick="changeBackgroundblack()" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-bolt w3-xxlarge"></i>
     <p>Switch</p>
-  </a>
+  </a> -->
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
@@ -80,26 +82,26 @@
   <header class="w3-container w3-padding-32 w3-center" id="home">
     <h1 class="w3-jumbo" >
       <span class="w3-hide-small">I'm</span> Ray.</h1>
-    <p >Web Developer || Cyber Security Expert || App Developer</p>
+    <p >Web Developer || Cyber Security Specialist || App Developer</p>
     <img  src="./images/boy.jpg" alt="boy" class="w3-image" width="450" height="450">
   </header>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
     <h2 class="w3-padding-16 w3-text-light-grey" style=" background-image: url(./images/matrix.gif);">Introduction</h2>
-    <div id="typedtext"  style="background-color:rgba(42, 41, 42, 0.647);"></div>
+    <div id="typedtext"  style="background-color:rgba(42, 41, 42, 0);"></div>
     <h3 class="w3-padding-16 w3-text-light-grey"  style=" background-image: url(./images/matrix.gif);">My Skills</h3>
     <p class="w3-wide">Web Development</p>
     <div class="w3-black">
-      <div class="w3-red" style="height:28px;width:95%;"></div>
+      <div class="w3-red" style="height:20px;width:95%;"></div>
     </div>
-    <p class="w3-wide">Data Base Programming</p>
+    <p class="w3-wide">Data Base</p>
     <div class="w3-black">
-      <div class="w3-red" style="height:28px;width:85%;"></div>
+      <div class="w3-red" style="height:20px;width:85%;"></div>
     </div>
     <p class="w3-wide">Ethical Hacking</p>
     <div class="w3-black">
-      <div class="w3-red" style="height:28px;width:80%;"></div>
+      <div class="w3-red" style="height:20px;width:10%;"></div>
     </div><br>
     
     
@@ -135,11 +137,15 @@
 
     
     <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey" style=" background-image: url(./images/matrix.gif);">Career Exprience</h3>  
+    <h3 class="w3-padding-24 w3-text-light-grey" style=" background-image: url(./images/matrix.gif);">Career Exprience</h3> 
+    <img src="./images/af.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Anytime Fitness</span>Network Engineer [Part Time]</p>
+    <p>August 2022 to 2023</p><br>
+
     <img src="./images/a-smart.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-margin-right">A-Smart Holdings</span>Artifical Inteligence Programmer [Internship]</p>
     <p>July 2019 to Febuary 2020</p><br>
-    
+
     <img src="./images/NCS.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-margin-right">NCS,</span>Roving Technical Assistant [Internship]</p>
     <p>June 2016 to December 2016</p>
@@ -264,6 +270,7 @@
     <h2 class="w3-padding-16 w3-text-light-white" style=" background-image: url(./images/matrix.gif);">Contact Me</h2>
 
     <div class="w3-section" style="background-color:rgba(42, 41, 42, 0.647);">
+      <br>
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Singapore</p>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +65 8715 8109</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: ngorui15@gmail.com</p>
@@ -274,12 +281,12 @@
   
     <!-- Footer -->
   <footer class="w3-content w3-text-white w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-whatsapp w3-hover-opacity"></i>
-    <i class="fa fa-telegram w3-hover-opacity"></i>
-    <i class="fa fa-github w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/ngo.ruipku" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/raylove_11b/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://wa.me/87158109" target="_blank"><i class="fa fa-whatsapp w3-hover-opacity"></i></a>
+    <a href="https://t.me/OhMyTianRay" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a>
+    <a href="https://github.com/ngoray" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/ngo-guo-rui-1353771a5/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <!-- End footer -->
   </footer>

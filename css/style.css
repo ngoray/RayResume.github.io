@@ -25,7 +25,7 @@ html {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 12px!important;
   }
   
   /* Track */
@@ -75,10 +75,11 @@ html {
 
 #myBar {
   width: 10%;
-  height: 2.5vw;
+  height: 2vh;
   background-color:red;
   text-align: center;
-  line-height: 2vw;
+  line-height: 2vh;
+  border-radius: 10px;
 }
 
 .back {
