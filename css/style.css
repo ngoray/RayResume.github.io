@@ -3,6 +3,10 @@ body, h1,h2,h3,h4,h5,h6 {
 }
 body{
   background-image: url(./../images/black.jpg);
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 html {
   scroll-behavior: smooth;
@@ -22,28 +26,6 @@ html {
 @media only screen and (max-width: 600px) {
     #main {margin-left: 0}
 }
-
-/* width */
-::-webkit-scrollbar {
-    width: 12px!important;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(46, 44, 44); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #949191; 
-  }
 
   .button {
     border: none;
@@ -88,3 +70,4 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
