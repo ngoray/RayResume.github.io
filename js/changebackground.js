@@ -76,15 +76,15 @@ function toggleFontAndBackground() {
     document.getElementById('half2').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
     document.getElementById('me').style.boxShadow=' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
 
-    $("prep").fadeIn();
-    y.style.display="none";
-    x.style.display="block";
+    // $("prep").fadeIn();
+    // y.style.display="none";
+    // x.style.display="block";
 
-    setTimeout(() => {
-      $("Home").fadeIn();
-      y.style.display = 'block';
-      x.style.display = 'none';
-    }, 2000);
+    // setTimeout(() => {
+    //   $("Home").fadeIn();
+    //   y.style.display = 'block';
+    //   x.style.display = 'none';
+    // }, 2000);
 
     allDivs.forEach(div => {
       div.style.fontFamily = 'Montserrat, sans-serif';
@@ -159,15 +159,15 @@ function toggleFontAndBackground() {
       // div.style.backgroundImage = '';
     });
 
-    $("prep").fadeIn();
-    y.style.display="none";
-    x.style.display="block";
+    // $("prep").fadeIn();
+    // y.style.display="none";
+    // x.style.display="block";
 
-    setTimeout(() => {
-      $("Home").fadeIn();
-      y.style.display = 'block';
-      x.style.display = 'none';
-    }, 2000);
+    // setTimeout(() => {
+    //   $("Home").fadeIn();
+    //   y.style.display = 'block';
+    //   x.style.display = 'none';
+    // }, 2000);
 
     isChanged = false;
   }
