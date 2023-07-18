@@ -63,12 +63,19 @@ function toggleFontAndBackground() {
     document.getElementById('sh').style.padding = '20px';
 
     document.getElementById('typedtext').style.backgroundColor = '#282828b3';
+    // document.getElementById('typedtext').style.boxShadow = ' 4px 4px 4px rgba(255, 255, 255, 0.2)';
     document.getElementById('typedtext').style.padding = '20px';
+
     document.getElementById('cation').style.backgroundColor = '#282828b3';
+    // document.getElementById('cation').style.boxShadow = ' 4px 4px 4px rgba(255, 255, 255, 0.2)';
     document.getElementById('cation').style.padding = '20px';
 
     document.getElementById('footo').style.backgroundColor = '#282828b3';
+    // document.getElementById('footo').style.boxShadow = ' 4px 4px 4px rgba(255, 255, 255, 0.2)';
     document.getElementById('footo').style.padding = '20px';
+
+    document.getElementById('half1').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
+    document.getElementById('half2').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
 
     $("prep").fadeIn();
     y.style.display="none";
@@ -136,14 +143,21 @@ function toggleFontAndBackground() {
     document.getElementById('sh').style.padding = '';
 
     document.getElementById('typedtext').style.backgroundColor = '';
+    document.getElementById('typedtext').style.boxShadow = '';
     document.getElementById('typedtext').style.padding = '';
+
     document.getElementById('cation').style.backgroundColor = '';
+    document.getElementById('cation').style.boxShadow = '';
     document.getElementById('cation').style.padding = '';
 
     document.getElementById('footo').style.backgroundColor = '';
+    document.getElementById('footo').style.boxShadow = '';
     document.getElementById('footo').style.padding = '';
 
     document.getElementById('pow').style.color='';
+
+    document.getElementById('half1').style.boxShadow='';
+    document.getElementById('half2').style.boxShadow='';
 
     allDivs.forEach(div => {
       div.style.fontFamily = '';
@@ -163,3 +177,21 @@ function toggleFontAndBackground() {
     isChanged = false;
   }
 }
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
