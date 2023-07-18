@@ -114,23 +114,23 @@ function toggleFontAndBackground() {
 
     document.getElementById('ct').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('ct').style.fontFamily='';
-    document.getElementById('ct').style.color='';
+    document.getElementById('ct').style.color='white';
 
     document.getElementById('ca').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('ca').style.fontFamily='';
-    document.getElementById('ca').style.color='';
+    document.getElementById('ca').style.color='white';
 
     document.getElementById('edu').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('edu').style.fontFamily='';
-    document.getElementById('edu').style.color='';
+    document.getElementById('edu').style.color='white';
 
     document.getElementById('sk').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('sk').style.fontFamily='';
-    document.getElementById('sk').style.color='';
+    document.getElementById('sk').style.color='white';
 
     document.getElementById('int').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('int').style.fontFamily='';
-    document.getElementById('int').style.color='';
+    document.getElementById('int').style.color='white';
 
     document.getElementById('fh').style.backgroundColor = '';
     document.getElementById('fh').style.padding = '';
