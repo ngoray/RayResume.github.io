@@ -73,7 +73,6 @@ html {
 
 .hide {
   display: none;
-  z-index: 3;
 }
     
 .myDIV:hover + .hide {
