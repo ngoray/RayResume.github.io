@@ -71,4 +71,14 @@ html {
   background-size: cover;
 }
 
+.hide {
+  display: none;
+  z-index: 3;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: rgb(255, 255, 255);
+}
+
 

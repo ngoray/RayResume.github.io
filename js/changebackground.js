@@ -64,7 +64,6 @@ function toggleFontAndBackground() {
 
     document.getElementById('typedtext').style.backgroundColor = '#282828b3';
     document.getElementById('typedtext').style.boxShadow = ' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
-    document.getElementById('typedtext').style.padding = '20px';
 
     document.getElementById('cation').style.backgroundColor = '#282828b3';
     document.getElementById('cation').style.boxShadow = ' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
@@ -75,6 +74,7 @@ function toggleFontAndBackground() {
 
     document.getElementById('half1').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
     document.getElementById('half2').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
+    document.getElementById('me').style.boxShadow=' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
 
     $("prep").fadeIn();
     y.style.display="none";
@@ -108,10 +108,6 @@ function toggleFontAndBackground() {
     document.getElementById('r').style.fontFamily='';
     document.getElementById('r').style.color='white';
 
-    // document.getElementById('a').style.color='red';
-    // document.getElementById('a1').style.color='red';
-    // document.getElementById('a2').style.color='red';
-
     document.getElementById('ref').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('ref').style.fontFamily='';
     document.getElementById('ref').style.color='white';
@@ -143,7 +139,6 @@ function toggleFontAndBackground() {
 
     document.getElementById('typedtext').style.backgroundColor = 'background-color: #181818b3;';
     document.getElementById('typedtext').style.boxShadow = '';
-    document.getElementById('typedtext').style.padding = '';
 
     document.getElementById('cation').style.backgroundColor = '';
     document.getElementById('cation').style.boxShadow = '';
@@ -157,6 +152,7 @@ function toggleFontAndBackground() {
 
     document.getElementById('half1').style.boxShadow='';
     document.getElementById('half2').style.boxShadow='';
+    document.getElementById('me').style.boxShadow='';
 
     allDivs.forEach(div => {
       div.style.fontFamily = '';
