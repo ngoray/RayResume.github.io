@@ -63,15 +63,14 @@ function toggleFontAndBackground() {
     document.getElementById('sh').style.padding = '20px';
 
     document.getElementById('typedtext').style.backgroundColor = '#282828b3';
-    // document.getElementById('typedtext').style.boxShadow = ' 4px 4px 4px rgba(255, 255, 255, 0.2)';
+    document.getElementById('typedtext').style.boxShadow = ' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
     document.getElementById('typedtext').style.padding = '20px';
 
     document.getElementById('cation').style.backgroundColor = '#282828b3';
-    // document.getElementById('cation').style.boxShadow = ' 4px 4px 4px rgba(255, 255, 255, 0.2)';
+    document.getElementById('cation').style.boxShadow = ' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
     document.getElementById('cation').style.padding = '20px';
 
     document.getElementById('footo').style.backgroundColor = '#282828b3';
-    // document.getElementById('footo').style.boxShadow = ' 4px 4px 4px rgba(255, 255, 255, 0.2)';
     document.getElementById('footo').style.padding = '20px';
 
     document.getElementById('half1').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
@@ -142,7 +141,7 @@ function toggleFontAndBackground() {
     document.getElementById('sh').style.backgroundColor = '';
     document.getElementById('sh').style.padding = '';
 
-    document.getElementById('typedtext').style.backgroundColor = '';
+    document.getElementById('typedtext').style.backgroundColor = 'background-color: #181818b3;';
     document.getElementById('typedtext').style.boxShadow = '';
     document.getElementById('typedtext').style.padding = '';
 
