@@ -76,6 +76,28 @@ function toggleFontAndBackground() {
     document.getElementById('half2').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
     document.getElementById('me').style.boxShadow=' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
 
+    document.getElementById('hr').style.borderColor='red';
+    document.getElementById('t1').style.border='1px solid red';
+    document.getElementById('t2').style.border='1px solid red';
+    document.getElementById('t3').style.border='1px solid red';
+    document.getElementById('t4').style.border='1px solid red';
+    document.getElementById('t5').style.border='1px solid red';
+    document.getElementById('t6').style.border='1px solid red';
+    document.getElementById('t7').style.border='1px solid red';
+    document.getElementById('t8').style.border='1px solid red';
+    document.getElementById('t9').style.border='1px solid red';
+    document.getElementById('t10').style.border='1px solid red';
+    document.getElementById('t11').style.border='1px solid red';
+    document.getElementById('t12').style.border='1px solid red';
+    document.getElementById('t13').style.border='1px solid red';
+    document.getElementById('t14').style.border='1px solid red';
+    document.getElementById('t15').style.border='1px solid red';
+    document.getElementById('t16').style.border='1px solid red';
+    document.getElementById('t17').style.border='1px solid red';
+    document.getElementById('t18').style.border='1px solid red';
+    document.getElementById('t19').style.border='1px solid red';
+    document.getElementById('t20').style.border='1px solid red';
+
     // $("prep").fadeIn();
     // y.style.display="none";
     // x.style.display="block";
@@ -153,6 +175,28 @@ function toggleFontAndBackground() {
     document.getElementById('half1').style.boxShadow='';
     document.getElementById('half2').style.boxShadow='';
     document.getElementById('me').style.boxShadow='';
+
+    document.getElementById('hr').style.borderColor='';
+    document.getElementById('t1').style.border='1px solid white';
+    document.getElementById('t2').style.border='1px solid white';
+    document.getElementById('t3').style.border='1px solid white';
+    document.getElementById('t4').style.border='1px solid white';
+    document.getElementById('t5').style.border='1px solid white';
+    document.getElementById('t6').style.border='1px solid white';
+    document.getElementById('t7').style.border='1px solid white';
+    document.getElementById('t8').style.border='1px solid white';
+    document.getElementById('t9').style.border='1px solid white';
+    document.getElementById('t10').style.border='1px solid white';
+    document.getElementById('t11').style.border='1px solid white';
+    document.getElementById('t12').style.border='1px solid white';
+    document.getElementById('t13').style.border='1px solid white';
+    document.getElementById('t14').style.border='1px solid white';
+    document.getElementById('t15').style.border='1px solid white';
+    document.getElementById('t16').style.border='1px solid white';
+    document.getElementById('t17').style.border='1px solid white';
+    document.getElementById('t18').style.border='1px solid white';
+    document.getElementById('t19').style.border='1px solid white';
+    document.getElementById('t20').style.border='1px solid white';
 
     allDivs.forEach(div => {
       div.style.fontFamily = '';
