@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/style.css">
@@ -12,6 +13,7 @@
 <link rel="stylesheet" href="./css/image.css">
 <link rel="stylesheet" href="./css/profilecard.css">
 <link rel="stylesheet" href="./css/honeycomb.css">
+<link rel="stylesheet" href="./css/pewpew.css">
 
 <link href="./images/R.JPG" rel="icon">
 <link href="./images/R.JPG" rel="apple-touch-icon">
@@ -107,7 +109,7 @@
     <h2 class="w3-padding-16" id="int" style=" background-image: url(./images/matrix.gif);">Introduction</h2>
     <div id="typedtext" class="w3-text-light-grey" style="background-color: #181818b3; padding: 20px;"></div>
     <h3 class="w3-padding-16" id="sk"  style=" background-image: url(./images/matrix.gif);">My Skills</h3>
-    <p class="w3-wide">Web Development</p>
+    <!-- <p class="w3-wide">Web Development</p>
     <div class="w3-black">
       <div class="w3-red" style="height:20px;width:95%;"></div>
     </div>
@@ -120,35 +122,21 @@
       <div class="w3-red" style="height:20px;width:10%;"></div>
     </div>
     <br>
-    <hr id="hr">
+    <hr id="hr"> -->
    <!-- Labels / tags -->
    <div class="w3-card" id="tagbox">
     <!-- <div class="w3-container w3-padding" style="background-color: #181818b3;">
       <h4>Tags</h4>
     </div> -->
-    <div class="w3-container">
-    <p>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t1" style="border:1px solid white;">Html</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t2" style="border:1px solid white;">CSS</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t3" style="border:1px solid white;">JavaScript</span> 
-      <span class="w3-tag w3-black w3-margin-bottom" id="t4" style="border:1px solid white;">NodeJS</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t5" style="border:1px solid white;">AngularJS</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t6" style="border:1px solid white;">TypeScript</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t7" style="border:1px solid white;">Unity</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t8" style="border:1px solid white;">C++</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t9" style="border:1px solid white;">Python</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t10" style="border:1px solid white;">MySQL</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t11" style="border:1px solid white;">MongoDB</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t12" style="border:1px solid white;">Agile Methodology</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t13" style="border:1px solid white;">S.C.R.U.M</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t14" style="border:1px solid white;">Crythography</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t15" style="border:1px solid white;">Microservice</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t16" style="border:1px solid white;">Windows Batch Scripting</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t17" style="border:1px solid white;">Figma</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t18" style="border:1px solid white;">Cisco Packet Tracer</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t19" style="border:1px solid white;">Object-Oriented Programming</span>
-      <span class="w3-tag w3-black w3-margin-bottom" id="t20" style="border:1px solid white;">Android Studio</span>
-    </p>
+    <center><button onclick="Reveal()" id="rev">Reveal</button></center>
+    <div class="w3-container" id="rev2" style="display: none;">
+        <div id="containerpew">
+            <div id="chatbox">
+              <div id="chatlog">Chatbox:</div>
+            </div>
+            <div id="mappew"></div>
+          </div>
+          
     </div>
   </div>   
     <br>
@@ -323,6 +311,8 @@
 <script src="./js/modal.js"></script>
 <script src="./js/loading.js"></script>
 <script src="./js/changebackground.js"></script>
+<script src="./js/pewpew.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>
