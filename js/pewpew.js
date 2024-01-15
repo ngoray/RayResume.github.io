@@ -27,6 +27,12 @@ function startMapAnimation() {
       "Cisco Packet Tracer",
       "Object-Oriented Programming",
       "Android Studio",
+      "IBM Qradar",
+      "Ensign XSOAR",
+      "CrowdStrike",
+      "Carbon Black",
+      "Palo Alto",
+      "Windows Defender",
       "Me" // Added "Me" to the list
     ];
 
