@@ -74,7 +74,7 @@ function toggleFontAndBackground() {
 
     document.getElementById('half1').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
     document.getElementById('half2').style.boxShadow='0px 10px 20px -10px rgba(255, 255, 255, 0.814)';
-    document.getElementById('me').style.boxShadow=' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
+    // document.getElementById('me').style.boxShadow=' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
 
     // document.getElementById('hr').style.borderColor='red';
     // document.getElementById('t1').style.border='1px solid red';
@@ -174,7 +174,7 @@ function toggleFontAndBackground() {
 
     document.getElementById('half1').style.boxShadow='';
     document.getElementById('half2').style.boxShadow='';
-    document.getElementById('me').style.boxShadow='';
+    // document.getElementById('me').style.boxShadow='';
 
     // document.getElementById('hr').style.borderColor='';
     // document.getElementById('t1').style.border='1px solid white';
