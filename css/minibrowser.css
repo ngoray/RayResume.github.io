@@ -1,0 +1,98 @@
+  /* The mini-browser window */
+  .mini-browser-container {
+    border: 3px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+  }
+
+  /* Container for columns and the top "toolbar" */
+  .mini-browser-row {
+    padding: 10px;
+    background-color: #434544c9;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* Create three unequal columns that float next to each other */
+  .mini-browser-column {
+    float: left;
+  }
+
+  .mini-browser-left {
+    width: 15%;
+  }
+
+  .mini-browser-right {
+    width: 10%;
+  }
+
+  .mini-browser-middle {
+    width: 75%;
+  }
+
+  /* Clear floats after the columns */
+  .mini-browser-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Three dots */
+  .mini-browser-dot {
+    margin-top: 4px;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Style the input field */
+  .mini-browser-input {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    margin-top: -8px;
+    height: 25px;
+    color: #666;
+    padding: 5px;
+  }
+
+  /* Three bars (hamburger menu) */
+  .mini-browser-bar {
+    width: 17px;
+    height: 3px;
+    background-color: #aaa;
+    margin: 3px 0;
+    display: block;
+  }
+
+  /* Page content */
+  .mini-browser-content {
+    padding: 10px;
+    height: calc(100% - 40px); /* Adjust the height for content area */
+    overflow: hidden; /* Enable scrolling if content is too long */
+  }
+
+  /* iframe styling */
+  .mini-browser-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+
+  /* Button styling */
+  .mini-browser-button {
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 10px; /* Adjust the spacing between buttons */
+      padding: 5px;
+      cursor: pointer;
+      width: 30%;
+  }

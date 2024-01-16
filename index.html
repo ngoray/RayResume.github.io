@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="./css/profilecard.css">
 <link rel="stylesheet" href="./css/honeycomb.css">
 <link rel="stylesheet" href="./css/pewpew.css">
+<link rel="stylesheet" href="./css/minibrowser.css">
 
 <link href="./images/R.JPG" rel="icon">
 <link href="./images/R.JPG" rel="apple-touch-icon">
@@ -143,8 +144,41 @@
   </div>   
     <br>
     
+    <div class="reveal">
+      <h3 class="w3-padding-24 w3-text-light-grey" id="proj" style=" background-image: url(./images/matrix.gif);">My Projects</h3> 
+
+      <button class="mini-browser-button" id="caaisg" onclick="loadMiniBrowserURL('https://caaisg.com/')">Load URL 1</button>
+      <button class="mini-browser-button" id="YFD" onclick="loadMiniBrowserURL('https://youthfd2023.github.io/yfd.github.io/')">Load URL 2</button>
+      <button class="mini-browser-button" id="CHAC" onclick="loadMiniBrowserURL('https://chacsg.com/')">Load URL 3</button>
+      <button class="mini-browser-button" id="Badminton" onclick="loadMiniBrowserURL('https://www.aspirebadmintonsg.com/')">Load URL 4</button>
+      
+      <div class="mini-browser-container" id="browse">
+        <hr style="color: #434544c9;">
+        <div class="mini-browser-row" id="browse-row">
+          <div class="mini-browser-column mini-browser-left">
+            <span onclick="document.getElementById('browse').style.display = 'none'" class="mini-browser-dot" style="background:#ED594A;"></span>
+            <span class="mini-browser-dot" style="background:#FDD800;"></span>
+            <span class="mini-browser-dot" style="background:#5AC05A;"></span>
+          </div>
+          <div class="mini-browser-column mini-browser-middle">
+            <input id="mini-browser-urlInput" class="mini-browser-input" type="text" placeholder="Enter URL">
+          </div>
+          <div class="mini-browser-column mini-browser-right">
+            <div style="float:right">
+              <span class="mini-browser-bar"></span>
+              <span class="mini-browser-bar"></span>
+              <span class="mini-browser-bar"></span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="mini-browser-content">
+          <iframe class="mini-browser-iframe" id="mini-browser-iframe"></iframe>
+        </div>
+      </div>
+    </div>
     
-    <!-- Grid for pricing tables -->
+    <!-- Education -->
     <div class="reveal">
     <h3 class="w3-padding-16" id="edu" style=" background-image: url(./images/matrix.gif);">Education</h3>
     <div id="cation">
@@ -173,11 +207,10 @@
     <p class="w3-text-light-grey ">June 2016 to December 2016</p>
     </div>
   </div>
-
-    <!-- End Grid/Pricing tables -->
+  <!-- Education -->
 
     
-    <!-- Testimonials -->
+    <!-- Career -->
     <div class="reveal">
     <h3 class="w3-padding-24" id="ca" style=" background-image: url(./images/matrix.gif);">Career Exprience</h3> 
     <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
@@ -195,23 +228,10 @@
     <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">NCS,</span>Roving Technical Assistant [Internship]</p>
     <p class=" w3-text-light-grey">June 2016 to December 2016</p>
   </div>
-  <!-- End About Section -->
-
-  <!-- <h3 class="w3-padding-24 w3-text-light-grey" style=" background-image: url(./images/matrix.gif);">co curricular activities</h3> 
-    <br>
-  <ul class="container1">
-    <li class="item1"><a href="#0" title="01"><img class="IMG1" src="./images/ndp2022.jpg" alt="01"></a></li>
-    <li class="item1"><a href="#0" title="02"><img class="IMG1" src="./images/seagames.png" alt="02"></a></li>
-    <li class="item1"><a href="#0" title="03"><img class="IMG1" src="./images/R.JPG" alt="03"></a></li>
-    <li class="item1"><a href="#0" title="04"><img class="IMG1" src="./images/R.JPG" alt="04"></a></li>
-    <li class="item1"><a href="#0" title="05"><img class="IMG1" src="./images/R.JPG" alt="05"></a></li>
-    <li class="item1"><a href="#0" title="06"><img class="IMG1" src="./images/R.JPG" alt="06"></a></li>
-    <li class="item1"><a href="#0" title="07"><img class="IMG1" src="./images/R.JPG" alt="07"></a></li>
-    <li class="item1"><a href="#0" title="08"><img class="IMG1" src="./images/R.JPG" alt="08"></a></li>
-    <li class="item1"><a href="#0" title="09"><img class="IMG1" src="./images/R.JPG" alt="09"></a></li>
-  </ul> -->
+  <!-- Career -->
 
   </div>
+  
   
   <!-- Portfolio Section -->
   <div class="w3-padding-16 w3-content reveal" id="photos">
@@ -317,8 +337,10 @@
 <script src="./js/loading.js"></script>
 <script src="./js/changebackground.js"></script>
 <script src="./js/pewpew.js"></script>
+<script src="./js/minibrowser.js"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 </body>
 </html>

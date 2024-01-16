@@ -47,6 +47,10 @@ function toggleFontAndBackground() {
     document.getElementById('edu').style.fontFamily='Montserrat, sans-serif';
     document.getElementById('edu').style.color='red';
 
+    document.getElementById('proj').style.backgroundImage='none';
+    document.getElementById('proj').style.fontFamily='Montserrat, sans-serif';
+    document.getElementById('proj').style.setProperty('color', 'red', 'important');
+
     document.getElementById('sk').style.backgroundImage='none';
     document.getElementById('sk').style.fontFamily='Montserrat, sans-serif';
     document.getElementById('sk').style.color='red';
@@ -145,6 +149,10 @@ function toggleFontAndBackground() {
     document.getElementById('edu').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('edu').style.fontFamily='';
     document.getElementById('edu').style.color='white';
+
+    document.getElementById('proj').style.backgroundImage="url('./images/matrix.gif')";
+    document.getElementById('proj').style.fontFamily='';
+    document.getElementById('proj').style.color='white';
 
     document.getElementById('sk').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('sk').style.fontFamily='';
