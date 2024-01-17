@@ -114,7 +114,7 @@
   <button class="mini-browser-button" id="caaisg" onclick="loadMiniBrowserURL('https://caaisg.com/')">Load URL 1</button>
   <button class="mini-browser-button" id="YFD" onclick="loadMiniBrowserURL('https://youthfd2023.github.io/yfd.github.io/')">Load URL 2</button>
   <button class="mini-browser-button" id="CHAC" onclick="loadMiniBrowserURL('https://chacsg.com/')">Load URL 3</button>
-  <button class="mini-browser-button" id="Badminton" onclick="loadMiniBrowserURL('https://www.aspirebadmintonsg.com/')">Load URL 4</button>
+  <button class="mini-browser-button" id="Google" onclick="loadMiniBrowserURL('https://www.google.com/')">Load URL 4</button>
 
   <div class="mini-browser-container">
     <div class="mini-browser-row">
@@ -124,6 +124,7 @@
         <span class="mini-browser-dot" style="background:#5AC05A;"></span>
       </div>
       <div class="mini-browser-column mini-browser-middle">
+        <!-- Add an ID to the input field for easy reference -->
         <input id="mini-browser-urlInput" class="mini-browser-input" type="text" placeholder="Enter URL">
       </div>
       <div class="mini-browser-column mini-browser-right">
@@ -136,11 +137,30 @@
     </div>
   
     <div class="mini-browser-content">
-      <iframe class="mini-browser-iframe" id="mini-browser-iframe"></iframe>
+      <iframe class="mini-browser-iframe" id="mini-browser-iframe" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
     </div>
   </div>
 
-<script>
+  <script>
+    var miniBrowserInput = document.getElementById("mini-browser-urlInput");
+    var miniBrowserIframe = document.getElementById("mini-browser-iframe");
+  
+    function loadMiniBrowserURL(url) {
+      miniBrowserInput.value = url;
+      miniBrowserIframe.src = url;
+    }
+  
+    // Add an event listener for the 'keydown' event on the input field
+    miniBrowserInput.addEventListener('keydown', function(event) {
+      // Check if the pressed key is Enter (key code 13)
+      if (event.keyCode === 13) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        // Load the URL when Enter is pressed
+        loadMiniBrowserURL(miniBrowserInput.value);
+      }
+    });
+  </script><script>
   var miniBrowserInput = document.getElementById("mini-browser-urlInput");
   var miniBrowserIframe = document.getElementById("mini-browser-iframe");
 
@@ -148,6 +168,17 @@
     miniBrowserInput.value = url;
     miniBrowserIframe.src = url;
   }
+
+  // Add an event listener for the 'keydown' event on the input field
+  miniBrowserInput.addEventListener('keydown', function(event) {
+    // Check if the pressed key is Enter (key code 13)
+    if (event.keyCode === 13) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+      // Load the URL when Enter is pressed
+      loadMiniBrowserURL(miniBrowserInput.value);
+    }
+  });
 </script>
 
 </body>
