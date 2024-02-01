@@ -131,7 +131,7 @@ function startMapAnimation() {
 
             animateLine(meLatLng, wordLatLng, function () {
               displayWordPopup(nextWord, wordLatLng);
-              logMessage('Me attacked ' + nextWord + ' with a pew pew!');
+              logMessage('My New Skill is:  ' + nextWord);
               attackNextWord();
             });
           } else {
@@ -152,4 +152,10 @@ function Reveal(){
     document.getElementById("rev2").style.display = "block";
 
     startMapAnimation();
+}
+
+
+function toggleFullScreen() {
+  var container = document.getElementById("containerpew");
+  container.classList.toggle("full-screen-mode");
 }

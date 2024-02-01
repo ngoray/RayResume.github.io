@@ -1,19 +1,15 @@
-#containerpew {
-    display: flex;
-  }
-
 #mappew {
     height: 60vh; /* 60% of the viewport height */
-    width: 80%; /* 70% of the parent container width */
+    width: 100%; /* 70% of the parent container width */
   }
 
 #chatbox {
-    height: 60vh;
-    width: 20%;
+    height: 10vh;
+    width: 100%;
     overflow-y: auto; /* Make the chatbox scrollable */
     padding: 10px;
     background-color: #333;
-    font-size: 8px;
+    font-size: 12px;
     color: red;
   }
 

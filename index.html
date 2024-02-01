@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./css/honeycomb.css">
 <link rel="stylesheet" href="./css/pewpew.css">
 <link rel="stylesheet" href="./css/minibrowser.css">
+<link rel="stylesheet" href="./css/slider.css">
 
 <link href="./images/R.JPG" rel="icon">
 <link href="./images/R.JPG" rel="apple-touch-icon">
@@ -132,13 +133,13 @@
       <h4>Tags</h4>
     </div> -->
     <center><button onclick="Reveal()" id="rev">Reveal</button></center>
-    <div class="w3-container" id="rev2" style="display: none;">
-        <div id="containerpew">
+    <div class="w3-container containerpew" id="rev2" style="display: none;">
+
+            <div id="mappew"></div>
+
             <div id="chatbox">
               <div id="chatlog">Chatbox:</div>
             </div>
-            <div id="mappew"></div>
-          </div>
           
     </div>
   </div>   
@@ -148,7 +149,7 @@
       <h3 class="w3-padding-24 w3-text-light-grey" id="proj" style=" background-image: url(./images/matrix.gif);">My Projects</h3> 
 
       <button class="mini-browser-button" id="caaisg" onclick="loadMiniBrowserURL('https://caaisg.com/')">Load URL 1</button>
-      <button class="mini-browser-button" id="YFD" onclick="loadMiniBrowserURL('https://https://rethinkgoodsg.com/')">Load URL 2</button>
+      <button class="mini-browser-button" id="YFD" onclick="loadMiniBrowserURL('https://rethinkgoodsg.com/')">Load URL 2</button>
       <button class="mini-browser-button" id="CHAC" onclick="loadMiniBrowserURL('https://chacsg.com/')">Load URL 3</button>
       <button class="mini-browser-button" id="Badminton" onclick="loadMiniBrowserURL('https://www.aspirebadmintonsg.com/')">Load URL 4</button>
       
@@ -204,7 +205,7 @@
 
     <img src="./images/pri.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">St andrew's Junior School,</span>PSLE</p>
-    <p class="w3-text-light-grey ">June 2016 to December 2016</p>
+    <p class="w3-text-light-grey ">June 2016 to December 2016</p><br>
     </div>
   </div>
   <!-- Education -->
@@ -212,22 +213,74 @@
     
     <!-- Career -->
     <div class="reveal">
-    <h3 class="w3-padding-24" id="ca" style=" background-image: url(./images/matrix.gif);">Career Exprience</h3> 
-    <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-    <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Ensign InfoSecurity,</span>Security Analyst [Internship]</p>
-    <p class=" w3-text-light-grey">October 2023 to Febuary 2024</p><br>
-    <!-- <img src="./images/af.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Anytime Fitness,</span>Network Engineer [Part Time]</p>
-    <p class=" w3-text-light-grey">August 2022 to September 2023</p><br> -->
+      <h3 class="w3-padding-24" id="ca" style=" background-image: url(./images/matrix.gif);">Career Exprience</h3> 
+      <div class="container-slider">
+        <div class="mySlides">
+          <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Ensign InfoSecurity,</span>Security Analyst [Internship]</p>
+          <p class=" w3-text-light-grey">October 2023 to Febuary 2024</p><br>
+    
+          <img src="./images/a-smart.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">A-Smart Holdings,</span>Artifical Inteligence Programmer [Internship]</p>
+          <p class=" w3-text-light-grey">July 2019 to Febuary 2020</p><br>
+    
+          <img src="./images/NCS.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">NCS,</span>Roving Technical Assistant [Internship]</p>
+          <p class=" w3-text-light-grey">June 2016 to December 2016</p>
+        </div>
 
-    <img src="./images/a-smart.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">A-Smart Holdings,</span>Artifical Inteligence Programmer [Internship]</p>
-    <p class=" w3-text-light-grey">July 2019 to Febuary 2020</p><br>
 
-    <img src="./images/NCS.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">NCS,</span>Roving Technical Assistant [Internship]</p>
-    <p class=" w3-text-light-grey">June 2016 to December 2016</p>
-  </div>
+        <div class="mySlides">
+          <img src="./images/jsa.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Junior Sports Academy,</span>Coach Assistant [Part Time]</p>
+          <p class=" w3-text-light-grey">December 2022 to October 2024</p><br>
+
+          <img src="./images/af.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Anytime Fitness,</span>Network Engineer [Part Time]</p>
+          <p class=" w3-text-light-grey">August 2022 to Febuary 2024</p><br>
+    
+          <img src="./images/osteria.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Osteria,</span>Waiter | Barista [Part Time]</p>
+          <p class=" w3-text-light-grey">January 2023 to October 2023</p><br>
+    
+          <img src="./images/double_zero.JPG" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Double Zero,</span>Waiter | Barista | Chef [Part Time]</p>
+          <p class=" w3-text-light-grey">January 2023 to October 2023</p><br>
+
+          <img src="./images/doc.JPG" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">D.O.C,</span>Waiter [Part Time]</p>
+          <p class=" w3-text-light-grey">August 2022 to December 2022</p><br>
+
+          <img src="./images/rsn.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey"> Republic of Singapore Navy,</span>Naval Chef [National Service]</p>
+          <p class=" w3-text-light-grey">January 2020 to July 2022</p><br>
+
+          <img src="./images/herbalife.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Herbal Life,</span>Usherer [Part Time]</p>
+          <p class=" w3-text-light-grey">March 2019 to March 2019</p><br>
+
+          <img src="./images/popular.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Popular,</span>Ink Promoter [Part Time]</p>
+          <p class=" w3-text-light-grey">December 2018 to December 2018</p><br>
+
+          <img src="./images/laz.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey"> Lazada Ltd,</span>Warehouse Lead [Part Time]</p>
+          <p class=" w3-text-light-grey">October 2018 to October 2018</p><br>
+
+          <img src="./images/starhub.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Starhub,</span>Promoter [Part Time]</p>
+          <p class=" w3-text-light-grey">September 2018 to September 2018</p><br>
+
+          <img src="./images/spellbound.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Spellbound,</span>Wedding Planner [Part Time]</p>
+          <p class=" w3-text-light-grey">April 2017 to December 2017</p><br>
+
+        </div>
+
+        <a class="prev-slider" onclick="plusSlides(-1)">❮</a>
+        <a class="next-slider" onclick="plusSlides(1)">❯</a>
+      </div>
+    </div>
   <!-- Career -->
 
   </div>
@@ -308,7 +361,7 @@
       <div class="w3-half">
 
         <p class="w3-text-light-grey"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: ngorui15@gmail.com</p>
-        <p class="w3-text-light-grey"><i class="fa fa-comments fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Ngo Rui (Ray)</p>
+        <p class="w3-text-light-grey"><i class="fa fa-comments fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Ngo Guo Rui (Ray)</p>
       </div>
 
       <a href="Ray_Resume.pdf" style="text-decoration: none;" target="_blank" download><p class="w3-text-light-grey"><i class="fa fa-download fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>My Resume.pdf</p></a>      
@@ -333,6 +386,7 @@
 <!-- END PAGE CONTENT -->
 </div>
 <script src="./js/script.js"></script>
+<script src="./js/slider.js"></script>
 <script src="./js/modal.js"></script>
 <script src="./js/loading.js"></script>
 <script src="./js/changebackground.js"></script>
