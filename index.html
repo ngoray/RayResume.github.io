@@ -1,407 +1,405 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Ray's Resume</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/scrollbar.css">
-<link rel="stylesheet" href="./css/image.css">
-<link rel="stylesheet" href="./css/profilecard.css">
-<link rel="stylesheet" href="./css/honeycomb.css">
-<link rel="stylesheet" href="./css/pewpew.css">
-<link rel="stylesheet" href="./css/minibrowser.css">
-<link rel="stylesheet" href="./css/slider.css">
+  <head>
+    <title>Ray's Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
+    <link rel="stylesheet" href="./css/image.css">
+    <link rel="stylesheet" href="./css/profilecard.css">
+    <link rel="stylesheet" href="./css/honeycomb.css">
+    <link rel="stylesheet" href="./css/pewpew.css">
+    <link rel="stylesheet" href="./css/minibrowser.css">
+    <link rel="stylesheet" href="./css/slider.css">
 
-<link href="./images/R.JPG" rel="icon">
-<link href="./images/R.JPG" rel="apple-touch-icon">
-<style>
-  @font-face 
-  {
-    font-family: Pixel Digivolve;
-    src: url("./css/PixelDigivolve.otf");
-  }
-</style>
-</head>
-<body class="w3-black">
-  <div id="Start">
-    <div class="center-container">
-      <button class="button button3" onclick="move()">
-        <h1 style="color: white;"><a>START</a></h1>
-    </button>
-    </div>
-</div>
-<div style="display: none;" class="center-container" id="Loading">
-  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./images/matrixtunnel.gif); background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-    <h1 style="font-size: 4.5vw; color: white;">RAY</h1>
-    <div id="myProgress" style="width: 50%;">
-        <div id="myBar">10%</div>
-        <br>
-    </div>
-</div>
-
-</div>
-
-<div style="max-width: 100%; max-height: 100%; position: relative; top: 250px;display: none;" id="prep">
-  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./images/pw.gif); background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-     
+    <link href="./images/R.JPG" rel="icon">
+    <link href="./images/R.JPG" rel="apple-touch-icon">
+    <style>
+      @font-face 
+      {
+        font-family: Pixel Digivolve;
+        src: url("./css/PixelDigivolve.otf");
+      }
+    </style>
+  </head>
+  <body class="w3-black">
+    <div id="Start">
+      <div class="center-container">
+        <button class="button button3" onclick="move()">
+          <h1 style="color: white;"><a>START</a></h1>
+      </button>
+      </div>
     </div>
 
-</div>
-
-<div style="display: none; background-color: rgba(0, 0, 0, 0.508);" id="Home">
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <a href="index.html" class="w3-text-light-grey" id="h" style="text-decoration: none;"><h1>R</h1></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge w3-text-light-grey"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge w3-text-light-grey"></i>
-    <p class="w3-text-light-grey">ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge w3-text-light-grey"></i>
-    <p class="w3-text-light-grey">REFERENCES</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i>
-    <p class="w3-text-light-grey">CONTACT</p>
-  </a>
-    <!-- <a onclick="toggleFontAndBackground()" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-bolt w3-xxlarge w3-text-light-grey"></i>
-    <p class="w3-text-light-grey">Switch</p>
-  </a> -->
-  <label class="switch myDIV" onchange="toggleFontAndBackground()">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>
-  <div class="hide">Change Theme</div>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">About</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">References</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact</a>
-    <a onclick="toggleFontAndBackground()" class="w3-bar-item w3-button" style="width:25% !important">Theme</a>
-  </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center" id="home">
-    <div class="center-container">
-      <h1 id="r" class="w3-jumbo" >
-        <a style="text-decoration: none;" href="#about"><span class="w3-hide-small w3-text-light-grey">I'm</span> Ray.</a></h1>
-      <!-- <p class="w3-text-light-grey">Web Developer || Cyber Security Specialist || App Developer</p> -->
-      <!-- <img id="me" src="./images/boy.jpg" alt="boy" class="w3-image" width="450" height="450"> -->
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-white w3-padding-64 reveal" id="about">
-    <h2 class="w3-padding-16" id="int" style=" background-image: url(./images/matrix.gif);">Introduction</h2>
-    <div id="typedtext" class="w3-text-light-grey" style="background-color: #181818b3; padding: 20px;"></div>
-    <h3 class="w3-padding-16" id="sk"  style=" background-image: url(./images/matrix.gif);">My Skills</h3>
-    <!-- <p class="w3-wide">Web Development</p>
-    <div class="w3-black">
-      <div class="w3-red" style="height:20px;width:95%;"></div>
-    </div>
-    <p class="w3-wide">Data Base</p>
-    <div class="w3-black">
-      <div class="w3-red" style="height:20px;width:85%;"></div>
-    </div>
-    <p class="w3-wide">Ethical Hacking</p>
-    <div class="w3-black">
-      <div class="w3-red" style="height:20px;width:10%;"></div>
-    </div>
-    <br>
-    <hr id="hr"> -->
-   <!-- Labels / tags -->
-   <div class="w3-card" id="tagbox">
-    <!-- <div class="w3-container w3-padding" style="background-color: #181818b3;">
-      <h4>Tags</h4>
-    </div> -->
-    <center><button onclick="Reveal()" id="rev">Reveal</button></center>
-    <div class="w3-container containerpew" id="rev2" style="display: none;">
-
-            <div id="mappew"></div>
-
-            <div id="chatbox">
-              <div id="chatlog">Chatbox:</div>
-            </div>
-          
-    </div>
-  </div>   
-    <br>
-    
-    <div class="reveal">
-      <h3 class="w3-padding-24 w3-text-light-grey" id="proj" style=" background-image: url(./images/matrix.gif);">My Projects</h3> 
-
-      <button class="mini-browser-button" id="caaisg" onclick="loadMiniBrowserURL('https://caaisg.com/')">Load URL 1</button>
-      <button class="mini-browser-button" id="YFD" onclick="loadMiniBrowserURL('https://rethinkgoodsg.com/')">Load URL 2</button>
-      <button class="mini-browser-button" id="CHAC" onclick="loadMiniBrowserURL('https://chacsg.com/')">Load URL 3</button>
-      <button class="mini-browser-button" id="Badminton" onclick="loadMiniBrowserURL('https://www.aspirebadmintonsg.com/')">Load URL 4</button>
-      
-      <div class="mini-browser-container" id="browse">
-        <hr style="color: #434544c9;">
-        <div class="mini-browser-row" id="browse-row">
-          <div class="mini-browser-column mini-browser-left">
-            <span onclick="document.getElementById('browse').style.display = 'none'" class="mini-browser-dot" style="background:#ED594A;"></span>
-            <span class="mini-browser-dot" style="background:#FDD800;"></span>
-            <span class="mini-browser-dot" style="background:#5AC05A;"></span>
-          </div>
-          <div class="mini-browser-column mini-browser-middle">
-            <input id="mini-browser-urlInput" class="mini-browser-input" type="text" placeholder="Enter URL">
-          </div>
-          <div class="mini-browser-column mini-browser-right">
-            <div style="float:right">
-              <span class="mini-browser-bar"></span>
-              <span class="mini-browser-bar"></span>
-              <span class="mini-browser-bar"></span>
-            </div>
-          </div>
-        </div>
-      
-        <div class="mini-browser-content">
-          <iframe class="mini-browser-iframe" id="mini-browser-iframe"></iframe>
+    <div style="display: none;" class="center-container" id="Loading">
+      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./images/matrixtunnel.gif); background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 style="font-size: 4.5vw; color: white;">RAY</h1>
+        <div id="myProgress" style="width: 50%;">
+            <div id="myBar">10%</div>
+            <br>
         </div>
       </div>
     </div>
+
+  <div style="max-width: 100%; max-height: 100%; position: relative; top: 250px;display: none;" id="prep">
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./images/pw.gif); background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    </div>
+  </div>
+
+  <div style="display: none; background-color: rgba(0, 0, 0, 0.508);" id="Home">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <a href="index.html" class="w3-text-light-grey" id="h" style="text-decoration: none;"><h1>R</h1></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+        <i class="fa fa-home w3-xxlarge w3-text-light-grey"></i>
+        <p>HOME</p>
+      </a>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge w3-text-light-grey"></i>
+        <p class="w3-text-light-grey">ABOUT</p>
+      </a>
+      <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-eye w3-xxlarge w3-text-light-grey"></i>
+        <p class="w3-text-light-grey">REFERENCES</p>
+      </a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i>
+        <p class="w3-text-light-grey">CONTACT</p>
+      </a>
+        <!-- <a onclick="toggleFontAndBackground()" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-bolt w3-xxlarge w3-text-light-grey"></i>
+        <p class="w3-text-light-grey">Switch</p>
+      </a> -->
+      <label class="switch myDIV" onchange="toggleFontAndBackground()">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <div class="hide">Change Theme</div>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+        <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">About</a>
+        <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">References</a>
+        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact</a>
+        <a onclick="toggleFontAndBackground()" class="w3-bar-item w3-button" style="width:25% !important">Theme</a>
+      </div>
+    </div>
+
+  <!-- Page Content -->
+  <div class="w3-padding-large" id="main">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-32 w3-center" id="home">
+      <div class="center-container">
+        <h1 id="r" class="w3-jumbo" >
+          <a style="text-decoration: none;" href="#about"><span class="w3-hide-small w3-text-light-grey">I'm</span> Ray.</a></h1>
+        <!-- <p class="w3-text-light-grey">Web Developer || Cyber Security Specialist || App Developer</p> -->
+        <!-- <img id="me" src="./images/boy.jpg" alt="boy" class="w3-image" width="450" height="450"> -->
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-white w3-padding-64 reveal" id="about">
+      <h2 class="w3-padding-16" id="int" style=" background-image: url(./images/matrix.gif);">Introduction</h2>
+      <div id="typedtext" class="w3-text-light-grey" style="background-color: #181818b3; padding: 20px;"></div>
+      <h3 class="w3-padding-16" id="sk"  style=" background-image: url(./images/matrix.gif);">My Skills</h3>
+      <!-- <p class="w3-wide">Web Development</p>
+      <div class="w3-black">
+        <div class="w3-red" style="height:20px;width:95%;"></div>
+      </div>
+      <p class="w3-wide">Data Base</p>
+      <div class="w3-black">
+        <div class="w3-red" style="height:20px;width:85%;"></div>
+      </div>
+      <p class="w3-wide">Ethical Hacking</p>
+      <div class="w3-black">
+        <div class="w3-red" style="height:20px;width:10%;"></div>
+      </div>
+      <br>
+      <hr id="hr"> -->
+    <!-- Labels / tags -->
+    <div class="w3-card" id="tagbox">
+      <!-- <div class="w3-container w3-padding" style="background-color: #181818b3;">
+        <h4>Tags</h4>
+      </div> -->
+      <center><button onclick="Reveal()" id="rev">Reveal</button></center>
+      <div class="w3-container containerpew" id="rev2" style="display: none;">
+        <div id="mappew"></div>
+        <div id="chatbox">
+          <div id="chatlog">Chatbox:</div>
+        </div>   
+      </div>
+    </div>   
+    <br>
+
+      <div class="reveal">
+        <h3 class="w3-padding-24 w3-text-light-grey" id="proj" style=" background-image: url(./images/matrix.gif);">My Projects</h3> 
+
+        <button class="mini-browser-button" id="caaisg" onclick="loadMiniBrowserURL('https://caaisg.com/')">Load URL 1</button>
+        <button class="mini-browser-button" id="YFD" onclick="loadMiniBrowserURL('https://rethinkgoodsg.com/')">Load URL 2</button>
+        <button class="mini-browser-button" id="CHAC" onclick="loadMiniBrowserURL('https://chacsg.com/')">Load URL 3</button>
+        <button class="mini-browser-button" id="Badminton" onclick="loadMiniBrowserURL('https://www.aspirebadmintonsg.com/')">Load URL 4</button>
+        
+        <div class="mini-browser-container" id="browse">
+          <hr style="color: #434544c9;">
+          <div class="mini-browser-row" id="browse-row">
+            <div class="mini-browser-column mini-browser-left">
+              <span onclick="document.getElementById('browse').style.display = 'none'" class="mini-browser-dot" style="background:#ED594A;"></span>
+              <span class="mini-browser-dot" style="background:#FDD800;"></span>
+              <span class="mini-browser-dot" style="background:#5AC05A;"></span>
+            </div>
+            <div class="mini-browser-column mini-browser-middle">
+              <input id="mini-browser-urlInput" class="mini-browser-input" type="text" placeholder="Enter URL">
+            </div>
+            <div class="mini-browser-column mini-browser-right">
+              <div style="float:right">
+                <span class="mini-browser-bar"></span>
+                <span class="mini-browser-bar"></span>
+                <span class="mini-browser-bar"></span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="mini-browser-content">
+            <iframe class="mini-browser-iframe" id="mini-browser-iframe"></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Education -->
+      <div class="reveal">
+      <h3 class="w3-padding-16" id="edu" style=" background-image: url(./images/matrix.gif);">Education</h3>
+      <div id="cation">
+      <img src="./images/SIM.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">SIM Global,</span>Bachalor in Cyber Security</p>
+      <p class="w3-text-light-grey">October 2022 to September 2024</p><br>
+
+      <img src="./images/shatec.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">Shatec,</span>WSQ Certificate in food services</p>
+      <p class="w3-text-light-grey">October 2019 to December 2019</p><br>
+      
+      <img src="./images/tp.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">Temasek Polytechnic,</span>Diploma in Information Technology</p>
+      <p class="w3-text-light-grey">April 2017 to December 2019</p><br>
     
+      <img src="./images/ite.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">ITE,</span>Nitec in Info Communication Technology</p>
+      <p class="w3-text-light-grey">January 2015 to December 2016</p><br>
+
+      <img src="./images/pri.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">St andrew's Secondary School,</span>N(A) Level</p>
+      <p class="w3-text-light-grey">June 2016 to December 2016</p><br>
+
+      <img src="./images/pri.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">St andrew's Junior School,</span>PSLE</p>
+      <p class="w3-text-light-grey ">June 2016 to December 2016</p><br>
+      </div>
+    </div>
     <!-- Education -->
-    <div class="reveal">
-    <h3 class="w3-padding-16" id="edu" style=" background-image: url(./images/matrix.gif);">Education</h3>
-    <div id="cation">
-    <img src="./images/SIM.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">SIM Global,</span>Bachalor in Cyber Security</p>
-    <p class="w3-text-light-grey">October 2022 to September 2024</p><br>
+     
+      <!-- Career -->
+      <div class="reveal">
+        <h3 class="w3-padding-24" id="ca" style=" background-image: url(./images/matrix.gif);">Career Exprience</h3> 
+        <div class="container-slider">
+          <div class="mySlides">
+            <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Ensign InfoSecurity,</span>Security Analyst Associate [Full Time]</p>
+            <p class=" w3-text-light-grey">August 2024 to Present</p><br>
 
-    <img src="./images/shatec.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">Shatec,</span>WSQ Certificate in food services</p>
-    <p class="w3-text-light-grey">October 2019 to December 2019</p><br>
-    
-    <img src="./images/tp.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">Temasek Polytechnic,</span>Diploma in Information Technology</p>
-    <p class="w3-text-light-grey">April 2017 to December 2019</p><br>
-  
-    <img src="./images/ite.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">ITE,</span>Nitec in Info Communication Technology</p>
-    <p class="w3-text-light-grey">January 2015 to December 2016</p><br>
+            <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Ensign InfoSecurity,</span>Security Analyst Associate [Contract]</p>
+            <p class=" w3-text-light-grey">Febuary 2024 to August 2024</p><br>
 
-    <img src="./images/pri.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">St andrew's Secondary School,</span>N(A) Level</p>
-    <p class="w3-text-light-grey">June 2016 to December 2016</p><br>
+            <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Ensign InfoSecurity,</span>Security Analyst [Internship]</p>
+            <p class=" w3-text-light-grey">October 2023 to Febuary 2024</p><br>
+      
+            <img src="./images/a-smart.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">A-Smart Holdings,</span>Artifical Inteligence Programmer [Internship]</p>
+            <p class=" w3-text-light-grey">July 2019 to Febuary 2020</p><br>
+      
+            <img src="./images/NCS.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">NCS,</span>Roving Technical Assistant [Internship]</p>
+            <p class=" w3-text-light-grey">June 2016 to December 2016</p>
+          </div>
 
-    <img src="./images/pri.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p class="w3-text-light-grey"><span class="w3-large w3-margin-right">St andrew's Junior School,</span>PSLE</p>
-    <p class="w3-text-light-grey ">June 2016 to December 2016</p><br>
-    </div>
-  </div>
-  <!-- Education -->
 
-    
-    <!-- Career -->
-    <div class="reveal">
-      <h3 class="w3-padding-24" id="ca" style=" background-image: url(./images/matrix.gif);">Career Exprience</h3> 
-      <div class="container-slider">
-        <div class="mySlides">
-          <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Ensign InfoSecurity,</span>Security Analyst Associate [Contract]</p>
-          <p class=" w3-text-light-grey">Febuary 2024 to June 2024</p><br>
+          <div class="mySlides">
+            <img src="./images/jsa.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Junior Sports Academy,</span>Coach Assistant [Part Time]</p>
+            <p class=" w3-text-light-grey">December 2022 to October 2024</p><br>
 
-          <img src="./images/Ensign.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Ensign InfoSecurity,</span>Security Analyst [Internship]</p>
-          <p class=" w3-text-light-grey">October 2023 to Febuary 2024</p><br>
-    
-          <img src="./images/a-smart.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">A-Smart Holdings,</span>Artifical Inteligence Programmer [Internship]</p>
-          <p class=" w3-text-light-grey">July 2019 to Febuary 2020</p><br>
-    
-          <img src="./images/NCS.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">NCS,</span>Roving Technical Assistant [Internship]</p>
-          <p class=" w3-text-light-grey">June 2016 to December 2016</p>
+            <img src="./images/af.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Anytime Fitness,</span>Network Engineer [Part Time]</p>
+            <p class=" w3-text-light-grey">August 2022 to Febuary 2024</p><br>
+
+            <img src="./images/calefare.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Mediacorp,</span>Calefare [Part Time]</p>
+            <p class=" w3-text-light-grey">January 2022 to October 2023</p><br>
+      
+            <img src="./images/osteria.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Osteria,</span>Waiter | Barista [Part Time]</p>
+            <p class=" w3-text-light-grey">January 2023 to October 2023</p><br>
+      
+            <img src="./images/double_zero.JPG" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Double Zero,</span>Waiter | Barista | Chef [Part Time]</p>
+            <p class=" w3-text-light-grey">January 2023 to October 2023</p><br>
+
+            <img src="./images/doc.JPG" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">D.O.C,</span>Waiter [Part Time]</p>
+            <p class=" w3-text-light-grey">August 2022 to December 2022</p><br>
+
+            <img src="./images/rsn.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey"> Republic of Singapore Navy,</span>Naval Chef [National Service]</p>
+            <p class=" w3-text-light-grey">January 2020 to July 2022</p><br>
+
+            <img src="./images/herbalife.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Herbal Life,</span>Usherer [Part Time]</p>
+            <p class=" w3-text-light-grey">March 2019 to March 2019</p><br>
+
+            <img src="./images/popular.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Popular,</span>Ink Promoter [Part Time]</p>
+            <p class=" w3-text-light-grey">December 2018 to December 2018</p><br>
+
+            <img src="./images/laz.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey"> Lazada Ltd,</span>Warehouse Lead [Part Time]</p>
+            <p class=" w3-text-light-grey">October 2018 to October 2018</p><br>
+
+            <img src="./images/starhub.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Starhub,</span>Promoter [Part Time]</p>
+            <p class=" w3-text-light-grey">September 2018 to September 2018</p><br>
+
+            <img src="./images/spellbound.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
+            <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Spellbound,</span>Wedding Planner [Part Time]</p>
+            <p class=" w3-text-light-grey">April 2017 to December 2017</p><br>
+
+          </div>
+
+          <a class="prev-slider" onclick="plusSlides(-1)">❮</a>
+          <a class="next-slider" onclick="plusSlides(1)">❯</a>
         </div>
-
-
-        <div class="mySlides">
-          <img src="./images/jsa.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Junior Sports Academy,</span>Coach Assistant [Part Time]</p>
-          <p class=" w3-text-light-grey">December 2022 to October 2024</p><br>
-
-          <img src="./images/af.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Anytime Fitness,</span>Network Engineer [Part Time]</p>
-          <p class=" w3-text-light-grey">August 2022 to Febuary 2024</p><br>
-
-          <img src="./images/calefare.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Mediacorp,</span>Calefare [Part Time]</p>
-          <p class=" w3-text-light-grey">January 2022 to October 2023</p><br>
-    
-          <img src="./images/osteria.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Osteria,</span>Waiter | Barista [Part Time]</p>
-          <p class=" w3-text-light-grey">January 2023 to October 2023</p><br>
-    
-          <img src="./images/double_zero.JPG" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Double Zero,</span>Waiter | Barista | Chef [Part Time]</p>
-          <p class=" w3-text-light-grey">January 2023 to October 2023</p><br>
-
-          <img src="./images/doc.JPG" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">D.O.C,</span>Waiter [Part Time]</p>
-          <p class=" w3-text-light-grey">August 2022 to December 2022</p><br>
-
-          <img src="./images/rsn.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey"> Republic of Singapore Navy,</span>Naval Chef [National Service]</p>
-          <p class=" w3-text-light-grey">January 2020 to July 2022</p><br>
-
-          <img src="./images/herbalife.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Herbal Life,</span>Usherer [Part Time]</p>
-          <p class=" w3-text-light-grey">March 2019 to March 2019</p><br>
-
-          <img src="./images/popular.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Popular,</span>Ink Promoter [Part Time]</p>
-          <p class=" w3-text-light-grey">December 2018 to December 2018</p><br>
-
-          <img src="./images/laz.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey"> Lazada Ltd,</span>Warehouse Lead [Part Time]</p>
-          <p class=" w3-text-light-grey">October 2018 to October 2018</p><br>
-
-          <img src="./images/starhub.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Starhub,</span>Promoter [Part Time]</p>
-          <p class=" w3-text-light-grey">September 2018 to September 2018</p><br>
-
-          <img src="./images/spellbound.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
-          <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">Spellbound,</span>Wedding Planner [Part Time]</p>
-          <p class=" w3-text-light-grey">April 2017 to December 2017</p><br>
-
-        </div>
-
-        <a class="prev-slider" onclick="plusSlides(-1)">❮</a>
-        <a class="next-slider" onclick="plusSlides(1)">❯</a>
       </div>
-    </div>
-  <!-- Career -->
+    <!-- Career -->
 
-  </div>
-  
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-16 w3-content reveal" id="photos">
-    <h2 class="w3-padding-16" id="ref" style=" background-image: url(./images/matrix.gif);">References</h2>
+    </div>
     
-    <center>
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half" id="fh">
-        <div class="card-container" id="half1">
-          <img class="round" src="./images/kevin.jpg" style="height: 250px; width: 200px;" alt="user" />
-          <h3 class="w3-text-light-grey">Kevin Choi</h3>
-          <h6 class="w3-text-light-grey">Scoot</h6>
-          <p class="w3-text-light-grey">Product Owner</p>
+    
+    <!-- Portfolio Section -->
+    <div class="w3-padding-16 w3-content reveal" id="photos">
+      <h2 class="w3-padding-16" id="ref" style=" background-image: url(./images/matrix.gif);">References</h2>
+      
+      <center>
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half" id="fh">
+          <div class="card-container" id="half1">
+            <img class="round" src="./images/kevin.jpg" style="height: 250px; width: 200px;" alt="user" />
+            <h3 class="w3-text-light-grey">Kevin Choi</h3>
+            <h6 class="w3-text-light-grey">Scoot</h6>
+            <p class="w3-text-light-grey">Product Owner</p>
+            <div class="buttons">
+              <a href="mailto:kevin.choy.wf@gmail.com"><button id="a1" class="primary">
+                Message
+              </button></a>
+            </div>
+            <div class="skills">
+              <ul>
+                <center>
+                <a href="https://wa.me/96255821" target="_blank"><li class="fa fa-whatsapp w3-hover-opacity w3-text-light-grey"></li></a>
+                <a href="https://kevinchoy.com/" target="_blank"><li class="fa fa-globe w3-hover-opacity w3-text-light-grey"></li></a>
+              </center>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="w3-half" id="sh">
+        <div class="card-container" id="half2">
+          <img class="round" src="./images/stacy.jpg" style="height: 250px; width: 250px;" alt="user" />
+          <h3 class="w3-text-light-grey">Stacy Goh</h3>
+          <h6 class="w3-text-light-grey">GovTech</h6>
+          <p class="w3-text-light-grey">Software Engineer</p>
           <div class="buttons">
-            <a href="mailto:kevin.choy.wf@gmail.com"><button id="a1" class="primary">
+            <a href="mailto:stacy.gohys@gmail.com"><button id="a2" class="primary">
               Message
             </button></a>
           </div>
           <div class="skills">
             <ul>
               <center>
-              <a href="https://wa.me/96255821" target="_blank"><li class="fa fa-whatsapp w3-hover-opacity w3-text-light-grey"></li></a>
-              <a href="https://kevinchoy.com/" target="_blank"><li class="fa fa-globe w3-hover-opacity w3-text-light-grey"></li></a>
+                <a href="https://www.linkedin.com/in/stacy-goh-b95b8566/" target="_blank"><li class="fa fa-linkedin w3-hover-opacity w3-text-light-grey"></li></a>
+                <a href="https://wa.me/96323208" target="_blank"><li class="fa fa-whatsapp w3-hover-opacity w3-text-light-grey"></li></a>
+              <!-- <a href="https://t.me/supercloud4" target="_blank"><li class="fa fa-telegram w3-hover-opacity w3-text-light-grey"></li></a> -->
             </center>
             </ul>
           </div>
         </div>
 
+      <!-- End photo grid -->
       </div>
-
-      <div class="w3-half" id="sh">
-      <div class="card-container" id="half2">
-        <img class="round" src="./images/stacy.jpg" style="height: 250px; width: 250px;" alt="user" />
-        <h3 class="w3-text-light-grey">Stacy Goh</h3>
-        <h6 class="w3-text-light-grey">GovTech</h6>
-        <p class="w3-text-light-grey">Software Engineer</p>
-        <div class="buttons">
-          <a href="mailto:stacy.gohys@gmail.com"><button id="a2" class="primary">
-            Message
-          </button></a>
-        </div>
-        <div class="skills">
-          <ul>
-            <center>
-              <a href="https://www.linkedin.com/in/stacy-goh-b95b8566/" target="_blank"><li class="fa fa-linkedin w3-hover-opacity w3-text-light-grey"></li></a>
-              <a href="https://wa.me/96323208" target="_blank"><li class="fa fa-whatsapp w3-hover-opacity w3-text-light-grey"></li></a>
-            <!-- <a href="https://t.me/supercloud4" target="_blank"><li class="fa fa-telegram w3-hover-opacity w3-text-light-grey"></li></a> -->
-          </center>
-          </ul>
-        </div>
-      </div>
-
-    <!-- End photo grid -->
+    <!-- End Portfolio Section -->
     </div>
-  <!-- End Portfolio Section -->
-  </div>
-  </center>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="reveal">
-  <div class="w3-padding-64 w3-content w3-text-white" id="contact">
-    <h2 class="w3-padding-16 w3-text-light-white" id="ct" style=" background-image: url(./images/matrix.gif);">Contact Me</h2>
-
-    <div class="w3-section" id="sectC">
-      <div class="w3-half">
-
-        <p class="w3-text-light-grey"><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Singapore</p>
-      <p class="w3-text-light-grey"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +65 8715 8109</p>
-
-      </div>
-      <div class="w3-half">
-
-        <p class="w3-text-light-grey"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: ngorui15@gmail.com</p>
-        <p class="w3-text-light-grey"><i class="fa fa-comments fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Ngo Guo Rui (Ray)</p>
-      </div>
-
-      <a href="Ray_Resume.pdf" style="text-decoration: none;" target="_blank" download><p class="w3-text-light-grey"><i class="fa fa-download fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>My Resume.pdf</p></a>      
+    </center>
     </div>
-  <!-- End Contact Section -->
+
+    <!-- Contact Section -->
+    <div class="reveal">
+    <div class="w3-padding-64 w3-content w3-text-white" id="contact">
+      <h2 class="w3-padding-16 w3-text-light-white" id="ct" style=" background-image: url(./images/matrix.gif);">Contact Me</h2>
+
+      <div class="w3-section" id="sectC">
+        <div class="w3-half">
+
+          <p class="w3-text-light-grey"><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Singapore</p>
+        <p class="w3-text-light-grey"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +65 8715 8109</p>
+
+        </div>
+        <div class="w3-half">
+
+          <p class="w3-text-light-grey"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: ngorui15@gmail.com</p>
+          <p class="w3-text-light-grey"><i class="fa fa-comments fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Ngo Guo Rui (Ray)</p>
+        </div>
+
+        <a href="Ray_Resume.pdf" style="text-decoration: none;" target="_blank" download><p class="w3-text-light-grey"><i class="fa fa-download fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>My Resume.pdf</p></a>      
+      </div>
+    <!-- End Contact Section -->
+    </div>
   </div>
-</div>
-    <!-- Footer -->
-  <footer class="w3-content w3-text-white w3-xlarge" id="footo">
-    <a href="https://www.facebook.com/ngo.ruipku" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/raylove_11b/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="https://wa.me/87158109" target="_blank"><i class="fa fa-whatsapp w3-hover-opacity"></i></a>
-    <a href="https://t.me/OhMyTianRay" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a>
-    <a href="https://github.com/ngoray" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/ngo-guo-rui-1353771a5/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <p class="w3-medium" id="pow">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-red">w3.css</a></p>
-  <!-- End footer -->
-  </footer>
+      <!-- Footer -->
+    <footer class="w3-content w3-text-white w3-xlarge" id="footo">
+      <a href="https://www.facebook.com/ngo.ruipku" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <a href="https://www.instagram.com/raylove_11b/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+      <a href="https://wa.me/87158109" target="_blank"><i class="fa fa-whatsapp w3-hover-opacity"></i></a>
+      <a href="https://t.me/OhMyTianRay" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a>
+      <a href="https://github.com/ngoray" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+      <a href="https://www.linkedin.com/in/ngo-guo-rui-1353771a5/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      <p class="w3-medium" id="pow">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-red">w3.css</a></p>
+    <!-- End footer -->
+    </footer>
 
 
 
-<!-- END PAGE CONTENT -->
-</div>
-<script src="./js/script.js"></script>
-<script src="./js/slider.js"></script>
-<script src="./js/modal.js"></script>
-<script src="./js/loading.js"></script>
-<script src="./js/changebackground.js"></script>
-<script src="./js/pewpew.js"></script>
-<script src="./js/minibrowser.js"></script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- END PAGE CONTENT -->
+  </div>
+  <script src="./js/script.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/loading.js"></script>
+  <script src="./js/changebackground.js"></script>
+  <script src="./js/pewpew.js"></script>
+  <script src="./js/minibrowser.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-</body>
+  </body>
 </html>
