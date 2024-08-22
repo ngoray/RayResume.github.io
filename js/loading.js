@@ -17,8 +17,7 @@ function move() {
           i = 0;
           x.style.display = "none";
           y.style.display = "block";
-          document.body.style.backgroundImage = "url('./images/matrix.gif')";
-          toggleFontAndBackground();
+          // document.body.style.backgroundImage = "url('./images/matrix.gif')";
         } else {
           width++;
           elem.style.width = width + "%";
