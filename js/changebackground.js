@@ -51,6 +51,10 @@ function toggleFontAndBackground() {
     document.getElementById('proj').style.fontFamily='Montserrat, sans-serif';
     document.getElementById('proj').style.setProperty('color', 'red', 'important');
 
+    document.getElementById('cert').style.backgroundImage='none';
+    document.getElementById('cert').style.fontFamily='Montserrat, sans-serif';
+    document.getElementById('cert').style.setProperty('color', 'red', 'important');
+
     document.getElementById('sk').style.backgroundImage='none';
     document.getElementById('sk').style.fontFamily='Montserrat, sans-serif';
     document.getElementById('sk').style.color='red';
@@ -72,6 +76,10 @@ function toggleFontAndBackground() {
     document.getElementById('cation').style.backgroundColor = '#282828b3';
     document.getElementById('cation').style.boxShadow = ' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
     document.getElementById('cation').style.padding = '20px';
+
+    document.getElementById('projb').style.backgroundColor = '#282828b3';
+    document.getElementById('projb').style.boxShadow = ' 0 8px 16px 0 rgba(255, 255, 255, 0.2)';
+    document.getElementById('projb').style.padding = '20px';
 
     document.getElementById('footo').style.backgroundColor = '#282828b3';
     document.getElementById('footo').style.padding = '20px';
@@ -154,6 +162,10 @@ function toggleFontAndBackground() {
     document.getElementById('proj').style.fontFamily='';
     document.getElementById('proj').style.color='white';
 
+    document.getElementById('cert').style.backgroundImage="url('./images/matrix.gif')";
+    document.getElementById('cert').style.fontFamily='';
+    document.getElementById('cert').style.color='white';
+
     document.getElementById('sk').style.backgroundImage="url('./images/matrix.gif')";
     document.getElementById('sk').style.fontFamily='';
     document.getElementById('sk').style.color='white';
@@ -173,6 +185,10 @@ function toggleFontAndBackground() {
     document.getElementById('cation').style.backgroundColor = '';
     document.getElementById('cation').style.boxShadow = '';
     document.getElementById('cation').style.padding = '';
+
+    document.getElementById('projb').style.backgroundColor = '';
+    document.getElementById('projb').style.boxShadow = '';
+    document.getElementById('projb').style.padding = '';
 
     document.getElementById('footo').style.backgroundColor = '';
     document.getElementById('footo').style.boxShadow = '';
