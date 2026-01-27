@@ -6,28 +6,28 @@ function startMapAnimation() {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    var originalWords = [
-      "Html",
-      "CSS",
-      "JavaScript",
-      "NodeJS",
-      "TypeScript",
-      "C++",
-      "Python",
-      "MySQL",
-      "MongoDB",
-      "Agile Methodology",
-      "S.C.R.U.M",
-      "Windows Batch Scripting",
-      "Figma",
-      "Cisco Packet Tracer",
-      "Object-Oriented Programming",
-      "IBM Qradar",
-      "Cortex XSOAR",
-      "CrowdStrike",
-      "Splunk",
-      "Me" // Added "Me" to the list
-    ];
+var originalWords = [
+  "Cybersecurity",
+  "Security Operations (SOC)",
+  "Threat Detection",
+  "Incident Response",
+  "SIEM",
+  "SOAR",
+  "Splunk",
+  "IBM QRadar",
+  "Cortex XSOAR",
+  "MITRE ATT&CK",
+  "Threat Intelligence",
+  "Log Analysis",
+  "Network Security",
+  "Endpoint Security",
+  "EDR",
+  "Vulnerability Management",
+  "Python for Security Automation",
+  "Query Languages (SIEM)",
+  "Detection Engineering",
+  "Me" // Still the most important asset 😎
+];
 
     var meMarker; // Reference to the current "Me" marker
 

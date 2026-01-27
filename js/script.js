@@ -1,14 +1,14 @@
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-    "As an inspired programmer, I am dedicated to constantly expanding my knowledge and skills in the field of coding.",
+    "As an aspiring cybersecurity professional, I am committed to continuously expanding my technical knowledge and strengthening my skills in security operations and defense.",
     "",
-    "With a strong passion for programming, I am committed to staying up-to-date with the latest technologies and trends, as well as continually improving my abilities through practice and education.", 
+    "With a strong interest in threat detection and response, I actively work to stay current with evolving cyber threats, security tools, and industry practices while improving through hands-on learning and practical experience.",
     "",
-    "I thrive on solving complex problems and enjoy the challenge of finding efficient and effective solutions through coding.", 
+    "I enjoy analyzing complex security problems and finding efficient solutions through automation, scripting, and structured investigation methods.", 
     "",
-    "With a strong foundation in programming languages such as JavaScript, Python, and C++, I am always eager to learn more and take on new challenges. Overall, I am a driven and motivated programmer with a passion for coding and a desire to continuously grow and improve my skills."
-    );
+    "With foundational knowledge in Python and exposure to SIEM and SOAR platforms such as XSOAR, I am focused on understanding how security systems function at a deeper technical level. I am particularly interested in learning different SIEM query languages and aim to develop tools that can translate queries across platforms, improving efficiency for security analysts working in multi-tool environments."
+);
     var iSpeed = 30; // time delay of print out
     var iIndex = 0; // start printing array at this posision
     var iArrLength = aText[0].length; // the length of the text array
