@@ -1,56 +1,144 @@
-body, h1,h2,h3,h4,h5,h6 {
-    font-family: Pixel Digivolve;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Pixel Digivolve;
 }
-body{
+body {
   background-image: url(./../images/black.jpg);
-    /* Center and scale the image nicely */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
+
 html {
   scroll-behavior: smooth;
 }
-.w3-row-padding img {
-    margin-bottom: 12px
-}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {
-    width: 120px;background: #222;
-}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {
-    margin-left: 120px
-}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {
-    #main {margin-left: 0}
+
+body.theme-matrix {
+  background-image: url(./../images/matrix.gif) !important;
 }
 
-  .button {
-    border: none;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+body.theme-modern,
+body.theme-modern h1,
+body.theme-modern h2,
+body.theme-modern h3,
+body.theme-modern h4,
+body.theme-modern h5,
+body.theme-modern h6,
+body.theme-modern div {
+  color: red;
+  font-family: Montserrat, sans-serif;
+}
+
+body.theme-modern {
+  background-image: none !important;
+}
+
+body.theme-modern #r,
+body.theme-modern #ref,
+body.theme-modern #ct,
+body.theme-modern #ca,
+body.theme-modern #edu,
+body.theme-modern #proj,
+body.theme-modern #cert,
+body.theme-modern #sk,
+body.theme-modern #int,
+body.theme-modern #pow {
+  color: red !important;
+}
+
+body.theme-modern #ref,
+body.theme-modern #ct,
+body.theme-modern #ca,
+body.theme-modern #edu,
+body.theme-modern #proj,
+body.theme-modern #cert,
+body.theme-modern #sk,
+body.theme-modern #int {
+  background-image: none !important;
+}
+
+body.theme-modern .round,
+body.theme-modern .skills ul li {
+  border-color: red;
+}
+
+body.theme-modern #fh {
+  background-color: #434544c9;
+  padding: 20px;
+}
+
+body.theme-modern #sh {
+  background-color: #515151c9;
+  padding: 20px;
+}
+
+body.theme-modern #typedtext,
+body.theme-modern #cation,
+body.theme-modern #projb {
+  background-color: #282828b3;
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
+
+body.theme-modern #footo {
+  background-color: #282828b3;
+  padding: 20px;
+}
+
+body.theme-modern #half1,
+body.theme-modern #half2 {
+  box-shadow: 0 10px 20px -10px rgba(255, 255, 255, 0.814);
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+
+.w3-sidebar {
+  width: 120px;
+  background: #222;
+}
+
+#main {
+  margin-left: 120px;
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
   }
+
+  #myNavbar .w3-bar-item {
+    width: 20% !important;
+    padding: 8px 0;
+  }
+}
+
+.button {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
 .button3 {
-    background-color:transparent;
-    border: none; 
-    color: white;
-  }
+  background-color: transparent;
+  border: none;
+  color: white;
+}
 
-  .button3 a:hover, .button3 a:focus {
-    /* background-color: red; */
-    color: red!important;
-  }
+.button3 a:hover,
+.button3 a:focus {
+  color: red !important;
+}
 
-  /* My Progress Bar */
 #myProgress {
   width: auto;
 }
@@ -58,14 +146,14 @@ html {
 #myBar {
   width: 10%;
   height: 2vh;
-  background-color:red;
+  background-color: red;
   text-align: center;
   line-height: 2vh;
   border-radius: 10px;
 }
 
 .back {
-  background-color:black ;   
+  background-color: black;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,7 +162,7 @@ html {
 .hide {
   display: none;
 }
-    
+
 .myDIV:hover + .hide {
   display: block;
   color: rgb(255, 255, 255);
@@ -84,7 +172,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* 100% of the viewport height */
+  min-height: 100vh;
+  min-height: 100svh;
 }
-
 
