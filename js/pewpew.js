@@ -29,74 +29,76 @@ function startMapAnimation() {
     { name: "Detection Engineering", group: "Engineering" },
     { name: "Vibe Coding", group: "Creative Build" },
   ];
-  const coreNode = { city: "Singapore", code: "SG", x: 72, y: 62 };
+  const mapBounds = { lonMin: -180, lonMax: 180, latMin: -58, latMax: 84 };
+  const projectPoint = (point) => ({
+    ...point,
+    x: ((point.lon - mapBounds.lonMin) / (mapBounds.lonMax - mapBounds.lonMin)) * 100,
+    y: ((mapBounds.latMax - point.lat) / (mapBounds.latMax - mapBounds.latMin)) * 100,
+  });
+  const coreNode = projectPoint({ city: "Singapore", code: "SG", lon: 103.8198, lat: 1.3521 });
   const targetNodes = [
-    { city: "San Francisco", code: "SFO", x: 17, y: 42 },
-    { city: "New York", code: "NYC", x: 29, y: 38 },
-    { city: "Toronto", code: "YTO", x: 28, y: 32 },
-    { city: "Mexico City", code: "MEX", x: 23, y: 55 },
-    { city: "Sao Paulo", code: "SAO", x: 38, y: 75 },
-    { city: "London", code: "LON", x: 48, y: 34 },
-    { city: "Frankfurt", code: "FRA", x: 52, y: 38 },
-    { city: "Helsinki", code: "HEL", x: 54, y: 27 },
-    { city: "Cairo", code: "CAI", x: 55, y: 51 },
-    { city: "Lagos", code: "LOS", x: 49, y: 62 },
-    { city: "Dubai", code: "DXB", x: 60, y: 49 },
-    { city: "Mumbai", code: "BOM", x: 65, y: 57 },
-    { city: "Seoul", code: "SEL", x: 79, y: 42 },
-    { city: "Tokyo", code: "TYO", x: 84, y: 43 },
-    { city: "Manila", code: "MNL", x: 78, y: 59 },
-    { city: "Jakarta", code: "JKT", x: 72, y: 69 },
-    { city: "Sydney", code: "SYD", x: 84, y: 78 },
-    { city: "Johannesburg", code: "JNB", x: 54, y: 77 },
-  ];
+    { city: "San Francisco", code: "SFO", lon: -122.4194, lat: 37.7749 },
+    { city: "New York", code: "NYC", lon: -74.006, lat: 40.7128 },
+    { city: "Sao Paulo", code: "SAO", lon: -46.6333, lat: -23.5505 },
+    { city: "London", code: "LON", lon: -0.1276, lat: 51.5074 },
+    { city: "Frankfurt", code: "FRA", lon: 8.6821, lat: 50.1109 },
+    { city: "Cairo", code: "CAI", lon: 31.2357, lat: 30.0444 },
+    { city: "Dubai", code: "DXB", lon: 55.2708, lat: 25.2048 },
+    { city: "Mumbai", code: "BOM", lon: 72.8777, lat: 19.076 },
+    { city: "Seoul", code: "SEL", lon: 126.978, lat: 37.5665 },
+    { city: "Tokyo", code: "TYO", lon: 139.6917, lat: 35.6895 },
+    { city: "Manila", code: "MNL", lon: 120.9842, lat: 14.5995 },
+    { city: "Jakarta", code: "JKT", lon: 106.8456, lat: -6.2088 },
+    { city: "Sydney", code: "SYD", lon: 151.2093, lat: -33.8688 },
+    { city: "Johannesburg", code: "JNB", lon: 28.0473, lat: -26.2041 },
+  ].map(projectPoint);
 
   radar.innerHTML = `
-    <div class="pew-map-grid"></div>
-    <svg class="pew-world-map" viewBox="0 0 1000 520" aria-hidden="true">
-      <path class="land" d="M93 193L125 137L205 106L299 121L346 168L315 226L249 232L211 270L154 247L114 230Z" />
-      <path class="land land-soft" d="M263 290L346 316L372 386L338 477L300 448L275 362Z" />
-      <path class="land" d="M455 146L504 120L562 151L535 201L470 196L431 175Z" />
-      <path class="land land-soft" d="M501 222L571 235L617 312L586 430L520 416L470 330Z" />
-      <path class="land" d="M565 140L682 119L791 160L856 230L805 285L704 266L655 331L584 270L535 199Z" />
-      <path class="land land-soft" d="M769 365L850 360L902 405L840 446L760 421Z" />
-      <path class="island" d="M721 310L737 323L724 334L706 323Z" />
-      <path class="island" d="M790 300L806 313L791 328L775 316Z" />
-      <path class="island" d="M845 283L862 291L850 308L833 298Z" />
-    </svg>
-    <div class="pew-route-layer"></div>
-    <div class="pew-node-layer"></div>
-    <div class="pew-map-status">
-      <span>global cyber traffic</span>
-      <strong>Ray security map online</strong>
+    <div class="soc-map-grid"></div>
+    <img class="soc-world-map" src="./images/world-map-real.svg" alt="" aria-hidden="true">
+    <svg class="soc-route-svg" aria-hidden="true"></svg>
+    <div class="soc-node-layer"></div>
+    <div class="soc-scanline"></div>
+    <div class="soc-map-hud">
+      <div><span>events</span><strong id="socEventCount">000</strong></div>
+      <div><span>severity</span><strong id="socSeverity">HIGH</strong></div>
+      <div><span>source</span><strong>SG-CSIRT</strong></div>
+    </div>
+    <div class="soc-map-status">
+      <span>soc attack map</span>
+      <strong>Ray CSIRT signal feed online</strong>
     </div>
   `;
 
-  const routeLayer = radar.querySelector(".pew-route-layer");
-  const nodeLayer = radar.querySelector(".pew-node-layer");
-  const statusLine = radar.querySelector(".pew-map-status strong");
+  const routeSvg = radar.querySelector(".soc-route-svg");
+  const nodeLayer = radar.querySelector(".soc-node-layer");
+  const statusLine = radar.querySelector(".soc-map-status strong");
+  const eventCount = radar.querySelector("#socEventCount");
+  const severityText = radar.querySelector("#socSeverity");
 
   [coreNode, ...targetNodes].forEach((point, index) => {
     const node = document.createElement("button");
-    node.className = `pew-node ${index === 0 ? "source" : ""}`;
+
+    node.className = `soc-node ${index === 0 ? "source" : ""}`;
     node.type = "button";
     node.style.left = `${point.x}%`;
     node.style.top = `${point.y}%`;
     node.title = `${point.city} cyber signal`;
-    node.innerHTML = `<span class="pew-node-dot"></span><small>${point.code}</small>`;
+    node.innerHTML = `<span class="soc-node-dot"></span><small>${point.code}</small>`;
     node.addEventListener("click", () => {
       const skill = skills[(index - 1 + skills.length) % skills.length];
-      fireRoute(coreNode, point, skill);
+      fireRoute(coreNode, point, skill, "manual");
     });
     nodeLayer.appendChild(node);
   });
 
-  function logRoute(from, to, skill) {
+  function logRoute(from, to, skill, severity) {
     if (!chatLog) return;
 
     const entry = document.createElement("div");
-    entry.className = "skill-log";
-    entry.textContent = `[PEW] ${from.code} -> ${to.code} | ${skill.name}`;
+
+    entry.className = `skill-log ${severity.toLowerCase()}`;
+    entry.textContent = `[${severity}] ${from.code} -> ${to.code} | ${skill.name}`;
     chatLog.appendChild(entry);
     chatLog.scrollTop = chatLog.scrollHeight;
 
@@ -105,33 +107,48 @@ function startMapAnimation() {
     }
   }
 
-  function fireRoute(from, to, skill) {
+  function fireRoute(from, to, skill, mode = "auto") {
     const rect = radar.getBoundingClientRect();
-    const x1 = (from.x / 100) * rect.width;
-    const y1 = (from.y / 100) * rect.height;
-    const x2 = (to.x / 100) * rect.width;
-    const y2 = (to.y / 100) * rect.height;
-    const dx = x2 - x1;
-    const dy = y2 - y1;
-    const length = Math.hypot(dx, dy);
-    const angle = Math.atan2(dy, dx) * (180 / Math.PI);
-    const route = document.createElement("div");
+    const width = Math.max(rect.width, 1);
+    const height = Math.max(rect.height, 1);
+    const x1 = (from.x / 100) * width;
+    const y1 = (from.y / 100) * height;
+    const x2 = (to.x / 100) * width;
+    const y2 = (to.y / 100) * height;
+    const midX = (x1 + x2) / 2;
+    const midY = (y1 + y2) / 2;
+    const bend = Math.min(Math.abs(x2 - x1) * 0.22 + 34, 120);
+    const curveY = midY - bend;
+    const severity = mode === "manual" ? "INVESTIGATE" : ["CRITICAL", "HIGH", "MEDIUM"][shotIndex % 3];
+    const ns = "http://www.w3.org/2000/svg";
+    const path = document.createElementNS(ns, "path");
+    const packet = document.createElementNS(ns, "circle");
+    const motion = document.createElementNS(ns, "animateMotion");
+    const route = `M ${x1} ${y1} Q ${midX} ${curveY} ${x2} ${y2}`;
 
-    route.className = "pew-shot-line";
-    route.style.left = `${x1}px`;
-    route.style.top = `${y1}px`;
-    route.style.width = `${length}px`;
-    route.style.transform = `rotate(${angle}deg)`;
-    route.innerHTML = "<span></span>";
-    routeLayer.appendChild(route);
+    routeSvg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    path.setAttribute("class", `soc-attack-path ${severity.toLowerCase()}`);
+    path.setAttribute("d", route);
+    packet.setAttribute("class", "soc-route-packet");
+    packet.setAttribute("r", "4");
+    motion.setAttribute("dur", "1s");
+    motion.setAttribute("path", route);
+    motion.setAttribute("fill", "freeze");
+    packet.appendChild(motion);
+    routeSvg.append(path, packet);
 
-    radar.querySelectorAll(".pew-node").forEach((node) => {
+    radar.querySelectorAll(".soc-node").forEach((node) => {
       node.classList.toggle("active", node.style.left === `${to.x}%` && node.style.top === `${to.y}%`);
     });
 
+    eventCount.textContent = String(284 + shotIndex).padStart(3, "0");
+    severityText.textContent = severity;
     statusLine.textContent = `${skill.group}: ${skill.name} -> ${to.city}`;
-    logRoute(from, to, skill);
-    setTimeout(() => route.remove(), 1200);
+    logRoute(from, to, skill, severity);
+    setTimeout(() => {
+      path.remove();
+      packet.remove();
+    }, 1200);
   }
 
   let shotIndex = 0;
@@ -139,7 +156,7 @@ function startMapAnimation() {
   function loop() {
     const skill = skills[shotIndex % skills.length];
     const target = targetNodes[(shotIndex * 5 + 2) % targetNodes.length];
-    const from = shotIndex % 4 === 0 ? targetNodes[(shotIndex * 7 + 5) % targetNodes.length] : coreNode;
+    const from = shotIndex % 4 === 0 ? targetNodes[(shotIndex * 7 + 3) % targetNodes.length] : coreNode;
 
     fireRoute(from, target, skill);
     shotIndex++;
@@ -158,3 +175,7 @@ function Reveal() {
 function toggleFullScreen() {
   document.querySelector(".containerpew")?.classList.toggle("full-screen-mode");
 }
+
+window.startMapAnimation = startMapAnimation;
+window.Reveal = Reveal;
+window.toggleFullScreen = toggleFullScreen;

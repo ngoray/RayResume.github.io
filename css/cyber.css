@@ -407,9 +407,9 @@ body.theme-modern #pow {
 
 #mappew {
   background:
-    radial-gradient(circle at 72% 62%, rgba(255, 255, 255, 0.16), transparent 7rem),
-    radial-gradient(circle at 50% 45%, rgba(255, 0, 0, 0.16), transparent 18rem),
-    linear-gradient(135deg, #060606, #101010 48%, #030303);
+    radial-gradient(circle at 72% 62%, rgba(255, 255, 255, 0.14), transparent 7rem),
+    radial-gradient(circle at 48% 40%, rgba(255, 0, 0, 0.18), transparent 19rem),
+    linear-gradient(135deg, #020202, #101010 46%, #030303);
   border-bottom: 1px solid rgba(255, 0, 0, 0.2);
   height: clamp(360px, 55vh, 560px);
   overflow: hidden;
@@ -426,9 +426,9 @@ body.theme-modern #pow {
 
 #mappew::before {
   background:
-    linear-gradient(rgba(255, 0, 0, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 0, 0, 0.08) 1px, transparent 1px);
-  background-size: 34px 34px;
+    linear-gradient(rgba(255, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 30px 30px;
   inset: 0;
   opacity: 0.8;
 }
@@ -440,6 +440,280 @@ body.theme-modern #pow {
   opacity: 0.58;
   right: 0;
   top: 50%;
+}
+
+.soc-map-grid,
+.soc-world-map,
+.soc-route-svg,
+.soc-node-layer,
+.soc-scanline,
+.soc-map-hud,
+.soc-map-status {
+  position: absolute;
+}
+
+.soc-map-grid,
+.soc-world-map,
+.soc-route-svg,
+.soc-node-layer,
+.soc-scanline {
+  inset: 0;
+}
+
+.soc-map-grid {
+  background:
+    linear-gradient(transparent 49%, rgba(255, 0, 0, 0.12) 50%, transparent 51%),
+    linear-gradient(90deg, transparent 49%, rgba(255, 0, 0, 0.12) 50%, transparent 51%),
+    radial-gradient(circle at 24% 36%, rgba(255, 0, 0, 0.14), transparent 9rem),
+    radial-gradient(circle at 73% 59%, rgba(255, 255, 255, 0.1), transparent 10rem);
+  background-size: 100% 100%, 100% 100%, auto, auto;
+  z-index: 0;
+}
+
+.soc-world-map {
+  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.24));
+  height: 100%;
+  left: 0;
+  object-fit: fill;
+  opacity: 0.92;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.soc-land,
+.soc-island {
+  fill: rgba(255, 0, 0, 0.12);
+  stroke: rgba(255, 255, 255, 0.34);
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.soc-land:nth-of-type(2n),
+.soc-island {
+  fill: rgba(255, 255, 255, 0.055);
+  stroke: rgba(255, 0, 0, 0.36);
+}
+
+.soc-land {
+  animation: socLandGlow 3.8s ease-in-out infinite;
+}
+
+.soc-route-svg {
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+  z-index: 3;
+}
+
+.soc-attack-path {
+  animation: socPathFlash 1.18s ease-out forwards;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 16 12;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+}
+
+.soc-attack-path.critical {
+  filter: drop-shadow(0 0 9px rgba(255, 0, 0, 0.96));
+  stroke: #ff1f1f;
+  stroke-width: 3;
+}
+
+.soc-attack-path.high,
+.soc-attack-path.investigate {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.72));
+  stroke: #fff;
+}
+
+.soc-attack-path.medium {
+  filter: drop-shadow(0 0 7px rgba(255, 138, 138, 0.7));
+  stroke: #ff8a8a;
+}
+
+.soc-route-packet {
+  fill: #fff;
+  filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 18px rgba(255, 0, 0, 0.85));
+}
+
+.soc-node-layer {
+  z-index: 4;
+}
+
+.soc-node {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  display: inline-flex;
+  gap: 7px;
+  padding: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.soc-node-dot {
+  animation: socNodePulse 1.8s infinite;
+  background: rgba(255, 255, 255, 0.88);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.62);
+  display: block;
+  flex: 0 0 6px;
+  height: 6px;
+  width: 6px;
+}
+
+.soc-node small {
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 0, 0, 0.32);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: Consolas, monospace;
+  font-size: 0.66rem;
+  line-height: 1;
+  padding: 4px 5px;
+}
+
+.soc-node.source .soc-node-dot {
+  animation-duration: 1s;
+  background: var(--danger);
+  border: 1px solid #fff;
+  box-shadow: 0 0 16px #fff, 0 0 26px var(--danger);
+  height: 16px;
+  width: 16px;
+}
+
+.soc-node.active small,
+.soc-node:hover small,
+.soc-node:focus small {
+  border-color: var(--danger);
+  color: #fff;
+}
+
+.soc-node.active .soc-node-dot,
+.soc-node:hover .soc-node-dot,
+.soc-node:focus .soc-node-dot {
+  background: #fff;
+  box-shadow: 0 0 14px #fff, 0 0 16px rgba(255, 0, 0, 0.46);
+}
+
+.soc-node.source.active .soc-node-dot,
+.soc-node.source:hover .soc-node-dot,
+.soc-node.source:focus .soc-node-dot {
+  background: var(--danger);
+}
+
+.soc-scanline {
+  animation: socScan 3.6s linear infinite;
+  background: linear-gradient(180deg, transparent, rgba(255, 0, 0, 0.22), transparent);
+  height: 32%;
+  opacity: 0.76;
+  transform: translateY(-100%);
+  z-index: 5;
+}
+
+.soc-map-hud {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  left: 12px;
+  right: 12px;
+  top: 12px;
+  z-index: 6;
+}
+
+.soc-map-hud div,
+.soc-map-status {
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 0, 0, 0.26);
+  border-radius: 7px;
+}
+
+.soc-map-hud div {
+  padding: 8px 10px;
+}
+
+.soc-map-hud span,
+.soc-map-status span {
+  color: var(--danger);
+  display: block;
+  font-size: 0.66rem;
+  line-height: 1;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.soc-map-hud strong {
+  color: var(--text);
+  display: block;
+  font-family: Consolas, monospace;
+  font-size: 0.86rem;
+  line-height: 1;
+}
+
+.soc-map-status {
+  bottom: 14px;
+  left: 14px;
+  max-width: min(430px, calc(100% - 28px));
+  padding: 11px 13px;
+  z-index: 6;
+}
+
+.soc-map-status strong {
+  color: var(--text);
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+@keyframes socLandGlow {
+  0%,
+  100% {
+    opacity: 0.76;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes socPathFlash {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 110;
+  }
+
+  22%,
+  74% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes socNodePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.54);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes socScan {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(320%);
+  }
 }
 
 .pew-map-grid,
@@ -457,31 +731,8 @@ body.theme-modern #pow {
 }
 
 .pew-map-grid {
-  background:
-    radial-gradient(circle at 25% 30%, rgba(255, 0, 0, 0.14), transparent 10rem),
-    radial-gradient(circle at 82% 70%, rgba(255, 255, 255, 0.1), transparent 11rem);
-  z-index: 0;
-}
-
-.pew-world-map {
-  filter: drop-shadow(0 0 18px rgba(255, 0, 0, 0.28));
-  height: 92%;
-  left: 4%;
-  top: 4%;
-  width: 92%;
+  display: none;
   z-index: 2;
-}
-
-.pew-world-map .land,
-.pew-world-map .island {
-  fill: rgba(255, 0, 0, 0.11);
-  stroke: rgba(255, 255, 255, 0.42);
-  stroke-width: 1.8;
-}
-
-.pew-world-map .land-soft {
-  fill: rgba(255, 255, 255, 0.07);
-  stroke: rgba(255, 0, 0, 0.38);
 }
 
 .pew-route-layer {
@@ -719,6 +970,19 @@ body.theme-modern #pow {
   color: var(--text);
   margin: 3px 0;
   padding-left: 8px;
+}
+
+.skill-log.critical {
+  color: #ff8a8a;
+}
+
+.skill-log.high,
+.skill-log.investigate {
+  color: #fff;
+}
+
+.skill-log.medium {
+  color: var(--muted);
 }
 
 .skill-popup {
@@ -1147,6 +1411,14 @@ body.theme-modern #pow {
   padding: 14px;
 }
 
+.experience-card.current-role {
+  background:
+    linear-gradient(135deg, rgba(255, 0, 0, 0.18), rgba(255, 255, 255, 0.045)),
+    rgba(255, 255, 255, 0.035);
+  border-color: rgba(255, 0, 0, 0.42);
+  box-shadow: 0 0 24px rgba(255, 0, 0, 0.12);
+}
+
 .experience-card img {
   aspect-ratio: 1;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -1542,22 +1814,34 @@ body.theme-modern #pow {
     min-height: 360px;
   }
 
-  .pew-world-map {
-    height: 88%;
-    left: 2%;
-    top: 6%;
-    width: 96%;
+  .soc-map-hud {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    left: 8px;
+    right: 8px;
+    top: 8px;
   }
 
-  .pew-node small {
+  .soc-map-hud div {
+    padding: 7px 8px;
+  }
+
+  .soc-map-hud span {
+    font-size: 0.58rem;
+  }
+
+  .soc-map-hud strong {
+    font-size: 0.76rem;
+  }
+
+  .soc-node small {
     display: none;
   }
 
-  .pew-node.source small {
+  .soc-node.source small {
     display: block;
   }
 
-  .pew-map-status {
+  .soc-map-status {
     bottom: 10px;
     left: 10px;
     max-width: calc(100% - 20px);
