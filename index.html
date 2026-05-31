@@ -138,15 +138,52 @@
     </header>
 
     <!-- About Section -->
-    <div class="w3-content w3-justify w3-text-white w3-padding-64 reveal" id="about">
+    <div class="w3-content w3-text-white w3-padding-64 reveal" id="about">
       <h2 class="w3-padding-16 cyber-heading" id="int">Introduction</h2>
-      <div id="typedtext" class="w3-text-light-grey terminal-card"></div>
-      <h3 class="w3-padding-16 cyber-heading" id="sk">Skill Radar</h3>
+      <section class="intro-console terminal-card" aria-label="Cybersecurity introduction snapshot">
+        <div class="intro-brief">
+          <p class="cyber-eyebrow">profile scan</p>
+          <h3>Cyber defender focused on incident response, detection, and security automation.</h3>
+          <div class="intro-type-row">
+            <span>ray@csirt:~$</span>
+            <strong id="typedtext"></strong>
+          </div>
+        </div>
+        <div class="intro-matrix" aria-label="Profile summary">
+          <div>
+            <span>Current</span>
+            <strong>Senior CSIRT Specialist</strong>
+          </div>
+          <div>
+            <span>Core</span>
+            <strong>SOC / IR / Detection</strong>
+          </div>
+          <div>
+            <span>Tools</span>
+            <strong>SIEM / SOAR / EDR</strong>
+          </div>
+          <div>
+            <span>Builds</span>
+            <strong>Python automation + vibe coding</strong>
+          </div>
+        </div>
+        <div class="intro-visual" aria-hidden="true">
+          <span class="intro-orbit orbit-one"></span>
+          <span class="intro-orbit orbit-two"></span>
+          <span class="intro-core">IR</span>
+          <span class="intro-node node-detect">Detect</span>
+          <span class="intro-node node-respond">Respond</span>
+          <span class="intro-node node-automate">Automate</span>
+        </div>
+      </section>
+      <h3 class="w3-padding-16 cyber-heading" id="sk">SOC Attack Map</h3>
     <!-- Labels / tags -->
     <div class="skill-shell" id="tagbox">
       <div class="skill-brief">
-        <p class="cyber-eyebrow">live capability map</p>
-        <h4>Security skills visualized as signals around your broader cybersecurity profile.</h4>
+        <div>
+          <p class="cyber-eyebrow">live capability map</p>
+          <h4>Security skills visualized as signals around your broader cybersecurity profile.</h4>
+        </div>
         <div class="skill-chip-grid">
           <span>Cybersecurity</span>
           <span>Security Operations (SOC)</span>
@@ -258,8 +295,18 @@
       <div class="reveal">
         <h3 class="w3-padding-24 cyber-heading" id="ca">Career Experience</h3> 
         <div id="cation">
+          <div class="career-filter" aria-label="Filter career experience">
+            <button class="career-filter-button active" type="button" data-career-filter="full-time" aria-pressed="true">
+              <span>Cyber / Full-Time</span>
+              <strong>5 roles</strong>
+            </button>
+            <button class="career-filter-button" type="button" data-career-filter="part-time" aria-pressed="false">
+              <span>Part-Time / Ops</span>
+              <strong>12 roles</strong>
+            </button>
+          </div>
           <div class="experience-board">
-            <section class="experience-column">
+            <section class="experience-column" data-career-panel="full-time">
               <h4>Security Track</h4>
               <article class="experience-card current-role">
                 <img src="./images/starhub.jpg" alt="StarHub">
@@ -302,7 +349,7 @@
                 </div>
               </article>
             </section>
-            <section class="experience-column">
+            <section class="experience-column is-hidden" data-career-panel="part-time">
               <h4>Part-Time & Operations Track</h4>
               <div class="parttime-grid">
                 <article class="parttime-card">

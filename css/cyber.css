@@ -46,6 +46,27 @@ body.theme-modern div {
   font-family: Montserrat, sans-serif;
 }
 
+body,
+button,
+input,
+textarea,
+select,
+p,
+span,
+small,
+strong,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  letter-spacing: 0;
+  word-spacing: normal;
+}
+
 body.theme-modern #r,
 body.theme-modern #ref,
 body.theme-modern #ct,
@@ -61,6 +82,34 @@ body.theme-modern #pow {
 
 #Home {
   background: transparent !important;
+}
+
+#Start .center-container {
+  min-height: 100vh;
+  min-height: 100svh;
+  text-align: center;
+}
+
+#Start .button3 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  margin: 0;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+#Start .button3 h1 {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+
+#Start .button3 a {
+  color: inherit;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 #main {
@@ -85,11 +134,16 @@ body.theme-modern #pow {
 }
 
 .w3-sidebar .w3-button {
+  align-items: center;
   border: 1px solid transparent;
   border-left: 2px solid transparent;
   border-radius: 8px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
   margin: 6px 10px;
   padding: 14px 6px !important;
+  text-align: center;
   width: calc(100% - 20px);
 }
 
@@ -99,9 +153,22 @@ body.theme-modern #pow {
   box-shadow: 0 0 22px rgba(255, 0, 0, 0.14);
 }
 
+#h {
+  align-items: center;
+  display: flex !important;
+  height: 56px;
+  justify-content: center;
+  margin: 0 auto 10px;
+  text-align: center;
+  width: 100%;
+}
+
 #h h1 {
   color: var(--cyan);
   font-family: Pixel Digivolve, Montserrat, sans-serif;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
   text-shadow: 0 0 16px rgba(255, 0, 0, 0.65);
 }
 
@@ -122,6 +189,8 @@ body.theme-modern #pow {
 .w3-sidebar p {
   font-size: 0.68rem;
   margin: 4px 0 0;
+  text-align: center;
+  width: 100%;
 }
 
 .w3-sidebar .switch {
@@ -154,6 +223,7 @@ body.theme-modern #pow {
   justify-self: stretch;
   min-height: 40px;
   padding: 10px 0 !important;
+  text-align: center;
   white-space: nowrap;
   width: 100% !important;
 }
@@ -352,18 +422,188 @@ body.theme-modern #pow {
   padding: clamp(18px, 3vw, 28px);
 }
 
+.intro-console {
+  align-items: stretch;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(220px, 0.78fr) minmax(190px, 0.52fr);
+}
+
+.intro-brief {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.intro-brief h3 {
+  color: var(--text);
+  font-size: clamp(1.18rem, 2.2vw, 1.7rem);
+  line-height: 1.4;
+  margin: 0 0 18px;
+}
+
+.intro-type-row {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.46);
+  border: 1px solid rgba(255, 0, 0, 0.22);
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 12px;
+}
+
+.intro-type-row span {
+  color: var(--danger);
+  flex: 0 0 auto;
+  font-family: Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+.intro-type-row strong {
+  color: var(--text);
+  font-family: Consolas, monospace;
+  font-size: clamp(0.82rem, 1.7vw, 0.96rem);
+  font-weight: 600;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.intro-matrix {
+  display: grid;
+  gap: 10px;
+}
+
+.intro-matrix div {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 0, 0, 0.18);
+  border-radius: 7px;
+  min-height: 68px;
+  padding: 12px;
+}
+
+.intro-matrix span {
+  color: var(--danger);
+  display: block;
+  font-size: 0.68rem;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.intro-matrix strong {
+  color: var(--text);
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.intro-visual {
+  align-items: center;
+  align-self: stretch;
+  background:
+    radial-gradient(circle at center, rgba(255, 0, 0, 0.22), transparent 42%),
+    linear-gradient(rgba(255, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: auto, 24px 24px, 24px 24px;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  min-height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro-orbit,
+.intro-core,
+.intro-node {
+  position: absolute;
+}
+
+.intro-orbit {
+  animation: introSpin 8s linear infinite;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  height: 62%;
+  width: 62%;
+}
+
+.orbit-two {
+  animation-duration: 11s;
+  border-color: rgba(255, 0, 0, 0.32);
+  height: 82%;
+  width: 82%;
+}
+
+.intro-core {
+  align-items: center;
+  background: #fff;
+  border: 2px solid var(--danger);
+  border-radius: 50%;
+  color: #050505;
+  display: flex;
+  font-family: Consolas, monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  height: 58px;
+  justify-content: center;
+  width: 58px;
+}
+
+.intro-node {
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.68rem;
+  padding: 5px 7px;
+}
+
+.node-detect {
+  left: 12px;
+  top: 20%;
+}
+
+.node-respond {
+  right: 10px;
+  top: 46%;
+}
+
+.node-automate {
+  bottom: 16%;
+  left: 22%;
+}
+
+@keyframes introSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .skill-shell {
   display: grid;
   gap: 18px;
-  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(0, 1fr);
   padding: 18px;
+}
+
+.skill-brief {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(240px, 0.42fr) minmax(0, 1fr);
 }
 
 .skill-brief h4 {
   color: var(--text);
-  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
   line-height: 1.4;
-  margin: 0 0 18px;
+  margin: 0;
 }
 
 .skill-chip-grid {
@@ -382,6 +622,11 @@ body.theme-modern #pow {
   display: inline-flex;
   font-size: 0.78rem;
   padding: 6px 10px;
+}
+
+.skill-chip-grid span {
+  font-size: 0.72rem;
+  padding: 5px 9px;
 }
 
 .radar-console {
@@ -411,7 +656,7 @@ body.theme-modern #pow {
     radial-gradient(circle at 48% 40%, rgba(255, 0, 0, 0.18), transparent 19rem),
     linear-gradient(135deg, #020202, #101010 46%, #030303);
   border-bottom: 1px solid rgba(255, 0, 0, 0.2);
-  height: clamp(360px, 55vh, 560px);
+  height: clamp(420px, 58vh, 620px);
   overflow: hidden;
   position: relative;
 }
@@ -1377,15 +1622,68 @@ body.theme-modern #pow {
   display: none;
 }
 
-.experience-board {
+.career-filter {
   display: grid;
-  gap: 18px;
-  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.career-filter-button {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 0, 0, 0.1), transparent 56%),
+    rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 12px 14px;
+  text-align: left;
+  width: 100%;
+}
+
+.career-filter-button.active,
+.career-filter-button:hover,
+.career-filter-button:focus {
+  background:
+    linear-gradient(135deg, rgba(255, 0, 0, 0.18), rgba(255, 255, 255, 0.045)),
+    rgba(255, 255, 255, 0.035);
+  border-color: rgba(255, 0, 0, 0.42);
+  box-shadow: 0 0 24px rgba(255, 0, 0, 0.12);
+  opacity: 1;
+}
+
+.career-filter-button span {
+  color: var(--text);
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.career-filter-button strong {
+  color: var(--danger);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+.experience-board {
+  display: block;
 }
 
 .experience-column {
   display: grid;
   gap: 12px;
+}
+
+.experience-column.is-hidden {
+  display: none;
 }
 
 .experience-column h4 {
@@ -1729,10 +2027,15 @@ body.theme-modern #pow {
 
 @media screen and (max-width: 980px) {
   .cyber-hero,
+  .intro-console,
   .skill-shell,
   .project-grid,
   .experience-board,
   .reference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-brief {
     grid-template-columns: 1fr;
   }
 
@@ -1768,6 +2071,29 @@ body.theme-modern #pow {
 
   .signal-grid {
     grid-template-columns: 1fr;
+  }
+
+  .intro-console {
+    gap: 14px;
+  }
+
+  .intro-type-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .intro-visual {
+    min-height: 190px;
+  }
+
+  .career-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .career-filter-button {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .skill-shell,
