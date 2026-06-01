@@ -27,7 +27,7 @@ body.theme-modern h4,
 body.theme-modern h5,
 body.theme-modern h6,
 body.theme-modern div {
-  color: red;
+  color: #3bbcff;
   font-family: Montserrat, sans-serif;
 }
 
@@ -45,7 +45,7 @@ body.theme-modern #cert,
 body.theme-modern #sk,
 body.theme-modern #int,
 body.theme-modern #pow {
-  color: red !important;
+  color: #3bbcff !important;
 }
 
 body.theme-modern #ref,
@@ -61,7 +61,7 @@ body.theme-modern #int {
 
 body.theme-modern .round,
 body.theme-modern .skills ul li {
-  border-color: red;
+  border-color: #3bbcff;
 }
 
 body.theme-modern #fh {
@@ -136,7 +136,7 @@ body.theme-modern #half2 {
 
 .button3 a:hover,
 .button3 a:focus {
-  color: red !important;
+  color: #3bbcff !important;
 }
 
 #myProgress {
@@ -146,7 +146,7 @@ body.theme-modern #half2 {
 #myBar {
   width: 10%;
   height: 2vh;
-  background-color: red;
+  background-color: #3bbcff;
   text-align: center;
   line-height: 2vh;
   border-radius: 10px;

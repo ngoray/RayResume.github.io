@@ -28,13 +28,13 @@ ul.images {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: #f44336; 
+    background-color: #158bff; 
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #a21b11; 
+    background-color: #075aa8; 
   }
 
   .reveal{

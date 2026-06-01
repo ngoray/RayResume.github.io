@@ -5,7 +5,7 @@
 
 #chatbox {
   background-color: #333;
-  color: red;
+  color: #3bbcff;
   font-size: 12px;
   height: clamp(90px, 12vh, 140px);
   overflow-y: auto;
@@ -16,7 +16,7 @@
 .word-popup {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
-  color: red;
+  color: #3bbcff;
   opacity: 1;
   padding: 5px;
   text-align: center;
@@ -36,7 +36,7 @@
 }
 
 .leaflet-popup-content {
-  color: red;
+  color: #3bbcff;
 }
 
 #chatlog {

@@ -23,34 +23,39 @@ function startMapAnimation() {
     { name: "Network Security", group: "Network" },
     { name: "Endpoint Security", group: "Endpoint" },
     { name: "EDR", group: "Endpoint" },
+    { name: "EPP", group: "Endpoint" },
+    { name: "FIM", group: "Integrity Monitoring" },
+    { name: "DRP", group: "Digital Risk" },
+    { name: "DAM", group: "Data Security" },
+    { name: "PAM", group: "Identity Security" },
     { name: "Vulnerability Management", group: "Exposure" },
     { name: "Python for Security Automation", group: "Scripting" },
     { name: "Query Languages (SIEM)", group: "SIEM" },
-    { name: "Detection Engineering", group: "Engineering" },
     { name: "Vibe Coding", group: "Creative Build" },
   ];
   const mapBounds = { lonMin: -180, lonMax: 180, latMin: -58, latMax: 84 };
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
   const projectPoint = (point) => ({
     ...point,
-    x: ((point.lon - mapBounds.lonMin) / (mapBounds.lonMax - mapBounds.lonMin)) * 100,
-    y: ((mapBounds.latMax - point.lat) / (mapBounds.latMax - mapBounds.latMin)) * 100,
+    x: ((clamp(point.lon, mapBounds.lonMin, mapBounds.lonMax) - mapBounds.lonMin) / (mapBounds.lonMax - mapBounds.lonMin)) * 100,
+    y: ((mapBounds.latMax - clamp(point.lat, mapBounds.latMin, mapBounds.latMax)) / (mapBounds.latMax - mapBounds.latMin)) * 100,
   });
-  const coreNode = projectPoint({ city: "Singapore", code: "SG", lon: 103.8198, lat: 1.3521 });
+  const coreNode = projectPoint({ city: "Singapore", code: "SG", lon: 103.8198, lat: 1.9 });
   const targetNodes = [
-    { city: "San Francisco", code: "SFO", lon: -122.4194, lat: 37.7749 },
-    { city: "New York", code: "NYC", lon: -74.006, lat: 40.7128 },
-    { city: "Sao Paulo", code: "SAO", lon: -46.6333, lat: -23.5505 },
-    { city: "London", code: "LON", lon: -0.1276, lat: 51.5074 },
-    { city: "Frankfurt", code: "FRA", lon: 8.6821, lat: 50.1109 },
-    { city: "Cairo", code: "CAI", lon: 31.2357, lat: 30.0444 },
-    { city: "Dubai", code: "DXB", lon: 55.2708, lat: 25.2048 },
-    { city: "Mumbai", code: "BOM", lon: 72.8777, lat: 19.076 },
-    { city: "Seoul", code: "SEL", lon: 126.978, lat: 37.5665 },
-    { city: "Tokyo", code: "TYO", lon: 139.6917, lat: 35.6895 },
-    { city: "Manila", code: "MNL", lon: 120.9842, lat: 14.5995 },
-    { city: "Jakarta", code: "JKT", lon: 106.8456, lat: -6.2088 },
-    { city: "Sydney", code: "SYD", lon: 151.2093, lat: -33.8688 },
-    { city: "Johannesburg", code: "JNB", lon: 28.0473, lat: -26.2041 },
+    { city: "San Francisco", code: "SFO", lon: -122.1, lat: 38.4 },
+    { city: "New York", code: "NYC", lon: -74.2, lat: 41.1 },
+    { city: "Sao Paulo", code: "SAO", lon: -47.2, lat: -22.9 },
+    { city: "London", code: "LON", lon: -1.2, lat: 52.1 },
+    { city: "Frankfurt", code: "FRA", lon: 9.2, lat: 50.7 },
+    { city: "Cairo", code: "CAI", lon: 30.8, lat: 30.6 },
+    { city: "Dubai", code: "DXB", lon: 54.7, lat: 24.9 },
+    { city: "Mumbai", code: "BOM", lon: 73.2, lat: 19.7 },
+    { city: "Seoul", code: "SEL", lon: 127.2, lat: 37.9 },
+    { city: "Tokyo", code: "TYO", lon: 139.4, lat: 36.0 },
+    { city: "Manila", code: "MNL", lon: 121.2, lat: 15.2 },
+    { city: "Jakarta", code: "JKT", lon: 107.0, lat: -6.0 },
+    { city: "Sydney", code: "SYD", lon: 150.6, lat: -33.3 },
+    { city: "Johannesburg", code: "JNB", lon: 28.2, lat: -25.8 },
   ].map(projectPoint);
 
   radar.innerHTML = `

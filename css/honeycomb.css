@@ -26,7 +26,7 @@
 	content: "";
 	position: absolute;
 	top: 0; bottom: 0; left: 0; right: 0;
-	background-color:red;
+	background-color:#3bbcff;
 	clip-path: polygon(50% 0, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
 	transform: scale(1.077);
 	transition: transform 0.3s;
@@ -151,11 +151,11 @@
   }
   
   input:checked + .slider {
-	background-color: red;
+	background-color: #3bbcff;
   }
   
   input:focus + .slider {
-	box-shadow: 0 0 1px red;
+	box-shadow: 0 0 1px #3bbcff;
   }
   
   input:checked + .slider:before {

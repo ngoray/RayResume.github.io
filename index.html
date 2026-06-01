@@ -40,7 +40,7 @@
 
     <div style="display: none;" class="center-container" id="Loading">
       <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./images/matrixtunnel.gif); background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <h1 style="font-size: 4.5vw; color: white;">RAY</h1>
+        <h1 class="loader-title loader-word">Loading</h1>
         <div id="myProgress" style="width: 50%;">
             <div id="myBar">10%</div>
             <br>
@@ -127,11 +127,11 @@
         <div class="console-lines">
           <p><span>Status</span> open to cybersecurity roles</p>
           <p><span>Focus</span> security engineering, defense, automation</p>
-          <p><span>Stack</span> SIEM, SOAR, Python, network and endpoint security</p>
+          <p><span>Stack</span> SIEM, SOAR, EDR/EPP, FIM, DRP, DAM/PAM</p>
         </div>
         <div class="signal-grid">
           <div><strong>20+</strong><span>skill signals</span></div>
-          <div><strong>3</strong><span>live projects</span></div>
+          <div><strong>8</strong><span>live projects</span></div>
           <div><strong>GCIH</strong><span>certified</span></div>
         </div>
       </div>
@@ -160,7 +160,7 @@
           </div>
           <div>
             <span>Tools</span>
-            <strong>SIEM / SOAR / EDR</strong>
+            <strong>SIEM / SOAR / EDR / EPP / FIM / DRP / DAM / PAM</strong>
           </div>
           <div>
             <span>Builds</span>
@@ -200,10 +200,14 @@
           <span>Network Security</span>
           <span>Endpoint Security</span>
           <span>EDR</span>
+          <span>EPP</span>
+          <span>FIM</span>
+          <span>DRP</span>
+          <span>DAM</span>
+          <span>PAM</span>
           <span>Vulnerability Management</span>
           <span>Python for Security Automation</span>
           <span>Query Languages (SIEM)</span>
-          <span>Detection Engineering</span>
           <span>Vibe Coding</span>
         </div>
       </div>
@@ -339,44 +343,49 @@
           <div class="experience-board">
             <section class="experience-column" data-career-panel="full-time">
               <h4>Security Track</h4>
-              <article class="experience-card current-role">
+              <article class="experience-card current-role" data-career-role="starhub" role="button" tabindex="0" aria-label="View StarHub role details">
                 <img src="./images/starhub.jpg" alt="StarHub">
                 <div>
                   <span>Apr 2026 to Present</span>
                   <h5>StarHub</h5>
                   <p>Senior Cybersecurity Incident Response Specialist (CSIRT)</p>
+                  <small class="experience-detail-hint">View details</small>
                 </div>
               </article>
-              <article class="experience-card">
+              <article class="experience-card" data-career-role="accenture" role="button" tabindex="0" aria-label="View Accenture role details">
                 <img src="./images/accn.png" alt="Accenture">
                 <div>
                   <span>Apr 2025 to Apr 2026</span>
                   <h5>Accenture</h5>
                   <p>Security Engineer</p>
+                  <small class="experience-detail-hint">View details</small>
                 </div>
               </article>
-              <article class="experience-card">
+              <article class="experience-card" data-career-role="ensign" role="button" tabindex="0" aria-label="View Ensign InfoSecurity role details">
                 <img src="./images/Ensign.jpg" alt="Ensign InfoSecurity">
                 <div>
                   <span>Oct 2023 to Apr 2025</span>
                   <h5>Ensign InfoSecurity</h5>
-                  <p>Security Analyst, Internship to Full Time</p>
+                  <p>SOC Analyst</p>
+                  <small class="experience-detail-hint">View details</small>
                 </div>
               </article>
-              <article class="experience-card">
+              <article class="experience-card" data-career-role="asmart" role="button" tabindex="0" aria-label="View A-Smart Holdings role details">
                 <img src="./images/a-smart.png" alt="A-Smart Holdings">
                 <div>
-                  <span>Jul 2019 to Feb 2020</span>
+                  <span>Jul 2019 to Dec 2019</span>
                   <h5>A-Smart Holdings</h5>
-                  <p>Artificial Intelligence Programmer, Internship</p>
+                  <p>Augmented Reality Consultant</p>
+                  <small class="experience-detail-hint">View details</small>
                 </div>
               </article>
-              <article class="experience-card">
+              <article class="experience-card" data-career-role="ncs" role="button" tabindex="0" aria-label="View NCS role details">
                 <img src="./images/NCS.png" alt="NCS">
                 <div>
-                  <span>Jun 2016 to Dec 2016</span>
+                  <span>Jul 2016 to Dec 2016</span>
                   <h5>NCS</h5>
                   <p>Roving Technical Assistant, Internship</p>
+                  <small class="experience-detail-hint">View details</small>
                 </div>
               </article>
             </section>
@@ -482,6 +491,24 @@
               </div>
             </section>
           </div>
+          <div class="career-modal" id="careerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="careerModalTitle">
+            <div class="career-modal-backdrop" data-career-modal-close></div>
+            <article class="career-modal-panel" tabindex="-1">
+              <button class="career-modal-close" type="button" data-career-modal-close aria-label="Close role details">
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="career-modal-header">
+                <img id="careerModalLogo" src="./images/starhub.jpg" alt="">
+                <div>
+                  <span id="careerModalMeta">Career details</span>
+                  <h3 id="careerModalTitle">Role details</h3>
+                  <p id="careerModalSubtitle"></p>
+                </div>
+              </div>
+              <div class="career-modal-tags" id="careerModalTags"></div>
+              <div class="career-modal-body" id="careerModalBody"></div>
+            </article>
+          </div>
           <div class="container-slider legacy-career-slider">
             <div class="mySlides">
               <img src="./images/starhub.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px; height: 80px;">
@@ -510,7 +537,7 @@
         
               <img src="./images/NCS.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
               <p class=" w3-text-light-grey"><span class="w3-large w3-margin-right w3-text-light-grey">NCS,</span>Roving Technical Assistant [Internship]</p>
-              <p class=" w3-text-light-grey">June 2016 to December 2016</p>
+              <p class=" w3-text-light-grey">July 2016 to December 2016</p>
             </div>
 
 
@@ -575,7 +602,12 @@
       <!-- Education -->
       <div class="reveal" id="education">
       <h3 class="w3-padding-16 cyber-heading" id="edu">Education Roadmap</h3>
-      <div class="timeline">
+      <div class="roadmap-shell">
+        <div class="roadmap-scroll-hint">
+          <span>Scroll sideways</span>
+          <i class="fa fa-arrow-right"></i>
+        </div>
+    <div class="timeline roadmap-horizontal">
         <div class="containerT leftT">
           <div class="contentT">
             <img src="./images/SIM.png" alt="SIM" class="roadmap-logo">
@@ -635,6 +667,7 @@
               <p class="w3-text-light-grey">St Andrew's Junior School</p>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -730,7 +763,7 @@
         <a href="https://www.instagram.com/raylove_11b/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
         <a href="https://www.facebook.com/ngo.ruipku" target="_blank" aria-label="Facebook"><i class="fa fa-facebook-official"></i></a>
       </nav>
-      <p class="w3-medium" id="pow">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-red">w3.css</a></p>
+    <p class="w3-medium" id="pow">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-blue">w3.css</a></p>
     <!-- End footer -->
     </footer>
 
